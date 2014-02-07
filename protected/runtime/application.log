@@ -1,0 +1,1915 @@
+2013/11/28 16:40:19 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`proyecto`.`cruge_authassignment`, CONSTRAINT `fk_cruge_authassignment_cruge_authitem1` FOREIGN KEY (`itemname`) REFERENCES `cruge_authitem` (`name`) ON DELETE NO ACTION ON UPDATE NO ACTION). La sentencia SQL ejecutada fue: UPDATE `cruge_authitem` SET `name`=:name, `type`=:type, `description`=:description, `bizrule`=:bizrule, `data`=:data WHERE name=:whereName.
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeAuthManager.php (894)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\controllers\UiController.php (656)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+2013/11/28 16:40:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`proyecto`.`cruge_authassignment`, CONSTRAINT `fk_cruge_authassignment_cruge_authitem1` FOREIGN KEY (`itemname`) REFERENCES `cruge_authitem` (`name`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: UPDATE `cruge_authitem` SET `name`=:name, `type`=:type, `description`=:description, `bizrule`=:bizrule, `data`=:data WHERE name=:whereName' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(1282): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeAuthManager.php(894): CDbCommand->update('cruge_authitem', Array, 'name=:whereName', Array)
+#2 C:\xampp\htdocs\yii\framework\web\auth\CAuthItem.php(120): CrugeAuthManager->saveAuthItem(Object(CAuthItem), 'estudiante')
+#3 C:\xampp\htdocs\yii\framework\base\CComponent.php(152): CAuthItem->setName('Estudiante')
+#4 C:\xampp\htdocs\Prueba1\protected\modules\cruge\controllers\UiController.php(656): CComponent->__set('name', 'Estudiante')
+#5 [internal function]: UiController->actionRbacAuthItemUpdate('estudiante')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UiController), Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UiController), Object(ReflectionMethod), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#11 C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUiAccessControlFilter.php(37): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CrugeUiAccessControlFilter->preFilter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('rbacauthitemupd...')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/ui/rbacau...')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Prueba1/cruge/ui/rbacauthitemupdate/id/estudiante
+HTTP_REFERER=http://localhost/Prueba1/cruge/ui/rbacauthitemupdate/id/estudiante
+---
+2013/11/28 17:38:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/admin
+HTTP_REFERER=http://localhost/Prueba1/curso
+---
+2013/11/28 17:39:19 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/view')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Prueba1/curso/view
+---
+2013/11/28 20:05:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/admin
+HTTP_REFERER=http://localhost/Prueba1/curso
+---
+2013/11/28 20:51:13 [error] [php] Array to string conversion (C:\xampp\htdocs\Prueba1\protected\views\curso\view.php:14)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): CursoController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): CursoController->renderPartial()
+#2 C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php(56): CursoController->render()
+#3 unknown(0): CursoController->actionView()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CursoController->runAction()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CursoController->filterAccessControl()
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CursoController->runActionWithFilters()
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CursoController->run()
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/curso/1
+in C:\xampp\htdocs\Prueba1\protected\views\curso\view.php (14)
+in C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php (56)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2013/11/28 20:53:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cirso"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('cirso')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Prueba1/cirso
+---
+2013/11/28 22:05:24 [error] [exception.CException] exception 'CException' with message 'CWebApplication y sus behaviors no tienen un método o closure llamado "baseUrl".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\protected\views\curso\view.php(16): CComponent->__call('baseUrl', Array)
+#1 C:\xampp\htdocs\Prueba1\protected\views\curso\view.php(16): CWebApplication->baseUrl()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php(56): CController->render('view', Array)
+#7 [internal function]: CursoController->actionView('1')
+#8 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CursoController), Array)
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CursoController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/view')
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/Prueba1/curso/1
+HTTP_REFERER=http://localhost/Prueba1/curso
+---
+2013/11/28 22:06:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Prueba1/tema/create/id/1"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Prueba1/tema/cr...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Prueba1/Prueba1/tema/create/id/1
+HTTP_REFERER=http://localhost/Prueba1/curso/1
+---
+2013/11/28 22:07:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Prueba1Prueba1/tema/create/id/1"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Prueba1Prueba1/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Prueba1/Prueba1Prueba1/tema/create/id/1
+HTTP_REFERER=http://localhost/Prueba1/curso/1
+---
+2013/11/28 22:10:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Prueba1../tema/create/id/1"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Prueba1../tema/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Prueba1/Prueba1../tema/create/id/1
+HTTP_REFERER=http://localhost/Prueba1/curso/1
+---
+2013/11/28 22:16:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Prueba1//tema/create/id/1"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Prueba1//tema/c...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Prueba1/Prueba1//tema/create/id/1
+HTTP_REFERER=http://localhost/Prueba1/curso/1
+---
+2013/11/28 22:17:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Prueba1/id"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Prueba1/id')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Prueba1/Prueba1/id/1
+HTTP_REFERER=http://localhost/Prueba1/curso/1
+---
+2013/11/28 22:35:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Prueba1/tema/create/id/1"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Prueba1/tema/cr...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Prueba1/Prueba1/tema/create/id/1
+HTTP_REFERER=http://localhost/Prueba1/curso/1
+---
+2013/12/01 04:52:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Prueba1/tema/create/id/1"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Prueba1/tema/cr...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Prueba1/Prueba1/tema/create/id/1
+HTTP_REFERER=http://localhost/Prueba1/curso/1
+---
+2013/12/01 19:08:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No se puede establecer una conexi�n ya que el equipo de destino deneg� expresamente dicha conexi�n.
+' in C:\xampp\htdocs\yii\framework\db\CDbConnection.php:381
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(CrugeSession))
+#7 C:\xampp\htdocs\Prueba1\protected\modules\cruge\models\data\CrugeSession.php(193): CActiveRecord::model('CrugeSession')
+#8 C:\xampp\htdocs\Prueba1\protected\modules\cruge\models\data\CrugeSession.php(90): CrugeSession::model()
+#9 C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeFactory.php(46): CrugeSession::loadModel('0')
+#10 C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUserManager.php(412): CrugeFactory->getICrugeSession('0')
+#11 C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php(451): CrugeUserManager->loadSession('0')
+#12 C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php(229): CrugeWebUser->getICrugeSession()
+#13 C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php(242): CrugeWebUser->getId()
+#14 C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php(194): CrugeWebUser->getIsGuest()
+#15 C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php(45): CWebUser->init()
+#16 C:\xampp\htdocs\yii\framework\base\CModule.php(387): CrugeWebUser->init()
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(209): CModule->getComponent('user')
+#18 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(129): CWebApplication->getUser()
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('curso')
+#27 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#28 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Prueba1/curso
+---
+2013/12/01 19:19:55 [error] [php] Object of class CWebApplication could not be converted to string (C:\xampp\htdocs\Prueba1\protected\views\curso\view.php:16)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(869): CursoController->renderFile()
+#1 C:\xampp\htdocs\Prueba1\framework\web\CController.php(782): CursoController->renderPartial()
+#2 C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php(56): CursoController->render()
+#3 unknown(0): CursoController->actionView()
+#4 C:\xampp\htdocs\Prueba1\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CursoController->runAction()
+#8 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CursoController->filterAccessControl()
+#11 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CursoController->runActionWithFilters()
+#14 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CursoController->run()
+#15 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/curso/1
+in C:\xampp\htdocs\Prueba1\protected\views\curso\view.php (16)
+in C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php (56)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2013/12/01 19:20:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Prueba1/tema/create/id/1"' in C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('Prueba1/tema/cr...')
+#1 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Prueba1/Prueba1/tema/create/id/1
+HTTP_REFERER=http://localhost/Prueba1/curso/1
+---
+2013/12/01 19:30:11 [error] [php] Undefined variable: id_c (C:\xampp\htdocs\Prueba1\protected\controllers\TemaController.php:76)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): TemaController->runAction()
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): TemaController->filterAccessControl()
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): TemaController->runActionWithFilters()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): TemaController->run()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/tema/create/id/1
+in C:\xampp\htdocs\Prueba1\protected\controllers\TemaController.php (76)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2013/12/01 19:46:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Prueba1/tema/create/id/1"' in C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('Prueba1/tema/cr...')
+#1 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Prueba1/Prueba1/tema/create/id/1
+HTTP_REFERER=http://localhost/Prueba1/curso/1
+---
+2013/12/16 17:59:42 [error] [exception.CException] exception 'CException' with message 'El alias "ext.emenu.EMenu" es inválido. Asegúrese de que apunta a un archivo PHP y el archivo tiene permisos de lectura.' in C:\xampp\htdocs\Prueba1\framework\YiiBase.php:316
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.emenu.EMenu', true)
+#1 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UiController), 'ext.emenu.EMenu', Array)
+#2 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.emenu.EMenu', Array)
+#3 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php(69): CBaseController->widget('ext.emenu.EMenu', Array)
+#4 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('??<div class='i...')
+#8 C:\xampp\htdocs\Prueba1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('??<div class='i...')
+#9 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\xampp\htdocs\Prueba1\protected\modules\cruge\views\layouts\ui.php(47): CBaseController->endContent()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#13 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\Prueba1\framework\web\CController.php(784): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#15 C:\xampp\htdocs\Prueba1\protected\modules\cruge\controllers\UiController.php(728): CController->render('rbacauthitemchi...', Array)
+#16 [internal function]: UiController->actionRbacAuthItemChildItems('Docente')
+#17 C:\xampp\htdocs\Prueba1\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UiController), Array)
+#18 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UiController), Object(ReflectionMethod), Array)
+#19 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#22 C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUiAccessControlFilter.php(37): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#23 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CrugeUiAccessControlFilter->preFilter(Object(CFilterChain))
+#24 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#26 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#27 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#28 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#29 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#30 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#31 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('rbacauthitemchi...')
+#32 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/ui/rbacau...')
+#33 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#34 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#35 {main}
+REQUEST_URI=/Prueba1/cruge/ui/rbacauthitemchilditems/id/Docente
+HTTP_REFERER=http://localhost/Prueba1/cruge/ui/rbaclistroles
+---
+2013/12/16 19:02:32 [error] [php] trim() expects parameter 1 to be string, array given (C:\xampp\htdocs\Prueba1\framework\zii\widgets\CMenu.php:308)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CMenu.php(156): CMenu->normalizeItems()
+#1 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(147): CMenu->init()
+#2 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(172): SiteController->createWidget()
+#3 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php(65): SiteController->widget()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#5 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#7 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#8 C:\xampp\htdocs\Prueba1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(206): CContentDecorator->run()
+#10 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(300): SiteController->endWidget()
+#11 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php(10): SiteController->endContent()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#14 C:\xampp\htdocs\Prueba1\framework\web\CController.php(784): SiteController->renderFile()
+#15 C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php(32): SiteController->render()
+#16 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#18 C:\xampp\htdocs\Prueba1\framework\web\CController.php(286): SiteController->runAction()
+#19 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#20 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): SiteController->run()
+#21 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/site/index
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (65)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php (10)
+in C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php (32)
+2013/12/16 19:05:39 [error] [php] trim() expects parameter 1 to be string, array given (C:\xampp\htdocs\Prueba1\framework\zii\widgets\CMenu.php:308)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CMenu.php(156): CMenu->normalizeItems()
+#1 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(147): CMenu->init()
+#2 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(172): SiteController->createWidget()
+#3 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php(65): SiteController->widget()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#5 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#7 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#8 C:\xampp\htdocs\Prueba1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(206): CContentDecorator->run()
+#10 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(300): SiteController->endWidget()
+#11 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php(10): SiteController->endContent()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#14 C:\xampp\htdocs\Prueba1\framework\web\CController.php(784): SiteController->renderFile()
+#15 C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php(32): SiteController->render()
+#16 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#18 C:\xampp\htdocs\Prueba1\framework\web\CController.php(286): SiteController->runAction()
+#19 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#20 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): SiteController->run()
+#21 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/site/index
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (65)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php (10)
+in C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php (32)
+2013/12/16 19:05:53 [error] [php] trim() expects parameter 1 to be string, array given (C:\xampp\htdocs\Prueba1\framework\zii\widgets\CMenu.php:308)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CMenu.php(156): CMenu->normalizeItems()
+#1 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(147): CMenu->init()
+#2 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(172): SiteController->createWidget()
+#3 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php(65): SiteController->widget()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#5 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#7 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#8 C:\xampp\htdocs\Prueba1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(206): CContentDecorator->run()
+#10 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(300): SiteController->endWidget()
+#11 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php(10): SiteController->endContent()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#14 C:\xampp\htdocs\Prueba1\framework\web\CController.php(784): SiteController->renderFile()
+#15 C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php(32): SiteController->render()
+#16 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#18 C:\xampp\htdocs\Prueba1\framework\web\CController.php(286): SiteController->runAction()
+#19 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#20 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): SiteController->run()
+#21 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/site/index
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (65)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php (10)
+in C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php (32)
+2013/12/16 19:13:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/c1093235/images/vimeo.com/box1-bottom-left.png"' in C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/c1093235...')
+#1 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Prueba1/assets/c1093235/images/vimeo.com/box1-bottom-left.png
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2013/12/16 20:28:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\Prueba1\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#10 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Prueba1/user/view
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2013/12/16 20:28:36 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\Prueba1\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#10 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Prueba1/user/view
+HTTP_REFERER=http://localhost/Prueba1/user/view
+---
+2013/12/16 20:29:25 [error] [php] Undefined variable: userid (C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php:68)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#1 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#2 C:\xampp\htdocs\Prueba1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(206): CContentDecorator->run()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(300): SiteController->endWidget()
+#5 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php(10): SiteController->endContent()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CController.php(784): SiteController->renderFile()
+#9 C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php(32): SiteController->render()
+#10 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#11 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CController.php(286): SiteController->runAction()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#14 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): SiteController->run()
+#15 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/site/index
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (68)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php (10)
+in C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php (32)
+2013/12/16 20:31:24 [error] [php] Undefined variable: id (C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php:68)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#1 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#2 C:\xampp\htdocs\Prueba1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(206): CContentDecorator->run()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(300): SiteController->endWidget()
+#5 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php(10): SiteController->endContent()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CController.php(784): SiteController->renderFile()
+#9 C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php(32): SiteController->render()
+#10 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#11 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CController.php(286): SiteController->runAction()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#14 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): SiteController->run()
+#15 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/site/index
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (68)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php (10)
+in C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php (32)
+2013/12/16 20:42:12 [error] [php] Undefined variable: id (C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php:62)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#1 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#2 C:\xampp\htdocs\Prueba1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(206): CContentDecorator->run()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(300): SiteController->endWidget()
+#5 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php(10): SiteController->endContent()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CController.php(784): SiteController->renderFile()
+#9 C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php(32): SiteController->render()
+#10 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#11 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CController.php(286): SiteController->runAction()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#14 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): SiteController->run()
+#15 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/site/index
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (62)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php (10)
+in C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php (32)
+2013/12/16 20:42:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\Prueba1\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#10 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Prueba1/user/view
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2013/12/16 20:44:11 [error] [php] Undefined variable: iduser (C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php:68)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#1 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#2 C:\xampp\htdocs\Prueba1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(206): CContentDecorator->run()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(300): SiteController->endWidget()
+#5 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php(10): SiteController->endContent()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CController.php(784): SiteController->renderFile()
+#9 C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php(32): SiteController->render()
+#10 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#11 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CController.php(286): SiteController->runAction()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#14 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): SiteController->run()
+#15 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/site/index
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (68)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php (10)
+in C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php (32)
+2013/12/16 20:45:08 [error] [php] Undefined variable: iduser (C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php:68)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(76): UserController->renderFile()
+#1 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#2 C:\xampp\htdocs\Prueba1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(206): CContentDecorator->run()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(300): UserController->endWidget()
+#5 C:\xampp\htdocs\Prueba1\protected\views\layouts\column2.php(22): UserController->endContent()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): UserController->renderInternal()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CController.php(784): UserController->renderFile()
+#9 C:\xampp\htdocs\Prueba1\protected\controllers\UserController.php(128): UserController->render()
+#10 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#11 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#13 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#16 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): UserController->runActionWithFilters()
+#19 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): UserController->run()
+#20 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/user
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (68)
+in C:\xampp\htdocs\Prueba1\protected\views\layouts\column2.php (22)
+in C:\xampp\htdocs\Prueba1\protected\controllers\UserController.php (128)
+2013/12/16 20:52:05 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\Prueba1\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#10 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Prueba1/user/view
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2013/12/16 21:35:12 [error] [php] Missing argument 1 for CrugeWebUser::checkAccess(), called in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php on line 58 and defined (C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php:113)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#2 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#3 C:\xampp\htdocs\Prueba1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(206): CContentDecorator->run()
+#5 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(300): SiteController->endWidget()
+#6 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php(10): SiteController->endContent()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CController.php(784): SiteController->renderFile()
+#10 C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php(32): SiteController->render()
+#11 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (113)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php (10)
+2013/12/16 21:35:36 [error] [php] Object of class CrugeAuthManager could not be converted to string (C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php:78)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#1 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#2 C:\xampp\htdocs\Prueba1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(206): CContentDecorator->run()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(300): SiteController->endWidget()
+#5 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php(10): SiteController->endContent()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CController.php(784): SiteController->renderFile()
+#9 C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php(32): SiteController->render()
+#10 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#11 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CController.php(286): SiteController->runAction()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#14 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): SiteController->run()
+#15 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (78)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php (10)
+in C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php (32)
+2013/12/16 21:37:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/admin')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/admin
+HTTP_REFERER=http://localhost/Prueba1/curso
+---
+2013/12/16 21:43:25 [error] [php] Undefined variable: params (C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php:58)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#1 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#2 C:\xampp\htdocs\Prueba1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(206): CContentDecorator->run()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(300): SiteController->endWidget()
+#5 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php(10): SiteController->endContent()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CController.php(784): SiteController->renderFile()
+#9 C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php(32): SiteController->render()
+#10 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#11 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CController.php(286): SiteController->runAction()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#14 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): SiteController->run()
+#15 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/site/index
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php (10)
+in C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php (32)
+2013/12/16 21:43:45 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:estudiante
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/16 21:45:39 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:estudiante
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/16 21:46:16 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:estudiante
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/16 21:46:21 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:estudiante
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/16 21:46:22 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:estudiante
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/16 21:46:25 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:estudiante
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/16 21:46:33 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:estudiante
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/16 21:46:38 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\Prueba1\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#10 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Prueba1/user/view
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2013/12/16 21:46:38 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:estudiante
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/16 21:47:11 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:estudiante
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/16 21:47:32 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:estudiante
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/16 21:47:39 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:estudiante
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/16 21:48:50 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/16 21:48:52 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/16 21:49:03 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/16 21:50:03 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/16 21:50:05 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/16 22:16:51 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/17 06:20:09 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/17 06:20:15 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\Prueba1\protected\views\hola\index.php:19)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(869): HolaController->renderFile()
+#1 C:\xampp\htdocs\Prueba1\framework\web\CController.php(782): HolaController->renderPartial()
+#2 C:\xampp\htdocs\Prueba1\protected\controllers\HolaController.php(8): HolaController->render()
+#3 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): HolaController->actionIndex()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(286): HolaController->runAction()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): HolaController->runActionWithFilters()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): HolaController->run()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/hola
+in C:\xampp\htdocs\Prueba1\protected\views\hola\index.php (19)
+in C:\xampp\htdocs\Prueba1\protected\controllers\HolaController.php (8)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2013/12/17 06:22:14 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/17 06:22:33 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/17 06:22:42 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/17 06:22:52 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/17 06:22:55 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/17 06:23:28 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/17 06:23:33 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/17 06:23:35 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/17 06:50:02 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/17 06:50:04 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/17 06:50:14 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/17 06:50:16 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/24 02:41:38 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 21:58:15 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:04:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "clases"' in C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('clases')
+#1 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Prueba1/clases
+---
+2013/12/29 22:04:12 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:04:19 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:04:29 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:11:22 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:16:03 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:16:06 [error] [php] Undefined variable: userdata (C:\xampp\htdocs\Prueba1\protected\views\clase\view.php:46)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(869): ClaseController->renderFile()
+#1 C:\xampp\htdocs\Prueba1\framework\web\CController.php(782): ClaseController->renderPartial()
+#2 C:\xampp\htdocs\Prueba1\protected\controllers\ClaseController.php(56): ClaseController->render()
+#3 unknown(0): ClaseController->actionView()
+#4 C:\xampp\htdocs\Prueba1\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): ClaseController->runAction()
+#8 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): ClaseController->filterAccessControl()
+#11 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): ClaseController->runActionWithFilters()
+#14 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): ClaseController->run()
+#15 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/clase/1
+in C:\xampp\htdocs\Prueba1\protected\views\clase\view.php (46)
+in C:\xampp\htdocs\Prueba1\protected\controllers\ClaseController.php (56)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2013/12/29 22:16:40 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:17:09 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:17:13 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:17:24 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:17:29 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:17:34 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:18:23 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:20:14 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:43:00 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:43:03 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:44:23 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:44:25 [error] [php] Undefined variable: userdata (C:\xampp\htdocs\Prueba1\protected\views\clase\view.php:48)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(869): ClaseController->renderFile()
+#1 C:\xampp\htdocs\Prueba1\framework\web\CController.php(782): ClaseController->renderPartial()
+#2 C:\xampp\htdocs\Prueba1\protected\controllers\ClaseController.php(56): ClaseController->render()
+#3 unknown(0): ClaseController->actionView()
+#4 C:\xampp\htdocs\Prueba1\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): ClaseController->runAction()
+#8 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): ClaseController->filterAccessControl()
+#11 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): ClaseController->runActionWithFilters()
+#14 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): ClaseController->run()
+#15 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/clase/1
+in C:\xampp\htdocs\Prueba1\protected\views\clase\view.php (48)
+in C:\xampp\htdocs\Prueba1\protected\controllers\ClaseController.php (56)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2013/12/29 22:45:35 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:46:45 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:46:47 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:51:02 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:51:05 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:52:07 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:52:15 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:52:22 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:52:26 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:53:46 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:53:49 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:54:47 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2013/12/29 22:54:49 [rbac] [application] PERMISO REQUERIDO:
+profesor1
+iduser=4
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:15:20 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:15:28 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:15:45 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:19:09 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:19:33 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:19:35 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:31:20 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:31:22 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:35:51 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:36:33 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:36:44 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:37:00 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:37:27 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:38:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "upload.php" solicitada.' in C:\xampp\htdocs\Prueba1\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(270): CController->missingAction('upload.php')
+#1 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('upload.php')
+#2 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('clase/upload.ph...')
+#3 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Prueba1/clase/upload.php
+HTTP_REFERER=http://localhost/Prueba1/clase/1
+---
+2014/02/06 22:38:35 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:38:44 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:39:01 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:48:46 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:49:07 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:52:37 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:53:38 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:54:23 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:54:38 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:56:32 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:56:52 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:58:06 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:59:06 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 22:59:26 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 23:02:21 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 23:07:37 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 23:46:53 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 23:47:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "upload.php" solicitada.' in C:\xampp\htdocs\Prueba1\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(270): CController->missingAction('upload.php')
+#1 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('upload.php')
+#2 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('clase/upload.ph...')
+#3 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Prueba1/clase/upload.php
+HTTP_REFERER=http://localhost/Prueba1/clase/1
+---
+2014/02/06 23:47:02 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 23:49:23 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 23:49:46 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 23:49:55 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 23:51:01 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 23:51:41 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 23:53:00 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/06 23:53:59 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/07 00:00:18 [error] [exception.CException] exception 'CException' with message 'ClaseController contiene etiquetas de widget en la vista "C:\xampp\htdocs\Prueba1\protected\views\clase\view.php" anidados incorrectamente. CActiveForm widget no contiene la llamada a endWidget().' in C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php:101
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#1 C:\xampp\htdocs\Prueba1\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#2 C:\xampp\htdocs\Prueba1\protected\controllers\ClaseController.php(56): CController->render('view', Array)
+#3 [internal function]: ClaseController->actionView('1')
+#4 C:\xampp\htdocs\Prueba1\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ClaseController), Array)
+#5 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ClaseController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('view')
+#15 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('clase/view')
+#16 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/Prueba1/clase/1
+HTTP_REFERER=http://localhost/carga/upload.php
+---
+2014/02/07 00:01:17 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/07 00:02:16 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/07 00:03:24 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/07 00:07:59 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/07 00:08:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "upload.php" solicitada.' in C:\xampp\htdocs\Prueba1\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(270): CController->missingAction('upload.php')
+#1 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('upload.php')
+#2 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('clase/upload.ph...')
+#3 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Prueba1/clase/upload.php
+HTTP_REFERER=http://localhost/Prueba1/clase/1
+---
+2014/02/07 00:08:04 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/07 00:39:45 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/07 00:39:49 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/07 00:39:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "."" solicitada.' in C:\xampp\htdocs\Prueba1\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(270): CController->missingAction('."')
+#1 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('."')
+#2 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('clase/."/compon...')
+#3 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Prueba1/clase/.%22/components/upload.php%22
+HTTP_REFERER=http://localhost/Prueba1/clase/1
+---
+2014/02/07 00:39:55 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/07 00:42:18 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/07 00:42:22 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/07 00:42:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "components" solicitada.' in C:\xampp\htdocs\Prueba1\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(270): CController->missingAction('components')
+#1 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('components')
+#2 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('clase/component...')
+#3 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Prueba1/clase/components/upload.php
+HTTP_REFERER=http://localhost/Prueba1/clase/1
+---
+2014/02/07 00:42:26 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/07 00:44:24 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/07 00:44:33 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)
+2014/02/07 00:45:08 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (58)

@@ -7,7 +7,10 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'ARGOS',
+	'theme'=>'newssourcefinal',
+	'language'=>'es',
+	'sourceLanguage'=>'en',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -18,13 +21,14 @@ return array(
 		'application.components.*',
 		'application.modules.cruge.components.*',
 		'application.modules.cruge.extensions.crugemailer.*',
+                'application.extensions.coco.*',
 	),
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'Enter Your Password Here',
+			'password'=>'123456',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
@@ -66,8 +70,8 @@ return array(
 				//		'afterLoginUrl'=>array('/site/welcome'),  ( !!! no olvidar el slash inicial / )
 				//		'afterLogoutUrl'=>array('/site/page','view'=>'about'),
 				//
-				'afterLoginUrl'=>null,
-				'afterLogoutUrl'=>null,
+				'afterLoginUrl'=>array('/site/index'),
+				'afterLogoutUrl'=>array('/site/page','view'=>'about'),
 				'afterSessionExpiredUrl'=>null,
 
 				// manejo del layout con cruge.
@@ -75,7 +79,7 @@ return array(
 				'loginLayout'=>'//layouts/column2',
 				'registrationLayout'=>'//layouts/column2',
 				'activateAccountLayout'=>'//layouts/column2',
-				'editProfileLayout'=>'//layouts/column2',
+				'editProfileLayout'=>'ui',
 				// en la siguiente puedes especificar el valor "ui" o "column2" para que use el layout
 				// de fabrica, es basico pero funcional.  si pones otro valor considera que cruge
 				// requerirá de un portlet para desplegar un menu con las opciones de administrador.
@@ -110,16 +114,17 @@ return array(
 				'datetimeFormat'=>"d M, Y h:m:s a",
 			),
 		// uncomment the following to enable URLs in path-format
-		/*
+		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+			'showScriptName'=>false,
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		*/
+		
 		/*
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
@@ -128,7 +133,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=proyecto',
+			'connectionString' => 'mysql:host=localhost;dbname=proyecto2',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
@@ -144,7 +149,7 @@ return array(
 			'routes'=>array(
 				array(
 					'class'=>'CFileLogRoute',
-					'levels'=>'error, warning',
+					'levels'=>'error, warning, rbac',  //Agregado el RBAC
 				),
 				// uncomment the following to show log messages on web pages
 				/*
