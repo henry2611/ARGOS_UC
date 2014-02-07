@@ -55,14 +55,14 @@
                                                 return false;
                                 }*/
                                 
-                             if(Yii::app()->user->checkAccess('docente'))
+                             /*if(Yii::app()->user->checkAccess('docente'))
                              { 
                                  $this->widget('zii.widgets.CMenu',array( 
                                      'items'=>array(
                                         array('label'=>'Home', 'url'=>array('/site/index')),
                                      ),
                                      ));
-                             }
+                             }*/
                                 
                                 $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
