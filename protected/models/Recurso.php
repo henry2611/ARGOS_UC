@@ -16,6 +16,7 @@
  */
 class Recurso extends CActiveRecord
 {
+        public $diapositiva;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -48,6 +49,9 @@ class Recurso extends CActiveRecord
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id_recurso, id_clase, nombre_recurso, ubicacion_recurso, duracion_recurso, peso_recurso', 'safe', 'on'=>'search'),
+                        //Reglas de Validación para las diapositivas
+                        //array('diapositiva', 'file', 'types'=>'application/vnd.ms-powerpoint'),
+                        array('diapositiva', 'file', 'types'=>'ppt'),
 		);
 	}
 

@@ -46,11 +46,11 @@ $this->menu=array(
         ));*/
    ?>
     <br/>
-    <form id="carga" action="../../components/upload.php" method="post" enctype="multipart/form-data">
-        <h3 style="color: #0040FF">Cargar Diapositivas</h3>
-        <input name="archivo" type="file" size="35" accept="application/vnd.ms-powerpoint"/><br/>
-        <input name="enviar" type="submit" value="Cargar" />
-        <input name="action" type="hidden" value="upload" />    
-    </form>
+    
+   <?php
+        $diapositivas = "Agregar Diapositivas";
+        $r = new Recurso;
+        echo CHtml::link($diapositivas, array('recurso/index','id'=>$model->id_clase));
+   ?>
     
 

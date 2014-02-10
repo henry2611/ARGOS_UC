@@ -69,9 +69,30 @@ class RecursoController extends Controller
 
 		if(isset($_POST['Recurso']))
 		{
-			$model->attributes=$_POST['Recurso'];
-			if($model->save())
+			//$model->attributes=$_POST['Recurso'];
+                        $model->id_clase = $_POST['Recurso']['id_clase'];
+                        $model->diapositiva=CUploadedFile::getInstance($model,'diapositiva');
+                        $model->nombre_recurso = $model->diapositiva->name;
+                        $aux = substr_replace($model->diapositiva->name, '', -4);
+                        $aux = Yii::getPathOfAlias('webroot').'/resources/'.$aux;
+                        $model->ubicacion_recurso = $aux.'/';
+                        $model->peso_recurso = ceil($model->diapositiva->size/1024);
+			if($model->save()){
+                                if(!file_exists($aux.'/')){
+                                    mkdir($aux, 0644, true);
+                                    $pwrpnt = new COM("powerpoint.application") or die("Unable to instantiate Powerpoint");
+                                    $presentation = $pwrpnt->Presentations->Open(realpath($model->diapositiva->tempName), false, false, false) or die("Unable to open presentation");
+                                    foreach($presentation->Slides as $slide){
+                                        $slideName = "Slide_" . $slide->SlideNumber;
+                                        $exportFolder = realpath($aux);
+                                        $slide->Export($exportFolder."\\".$slideName.".jpg", "jpg", "1280", "800");
+                                    }
+                                    $pwrpnt->quit();
+                                    
+                                    $model->diapositiva->saveAs($aux.'/'.$model->diapositiva->name);
+                                }
 				$this->redirect(array('view','id'=>$model->id_recurso));
+                        }
 		}
 
 		$this->render('create',array(
@@ -102,6 +123,7 @@ class RecursoController extends Controller
 			'model'=>$model,
 		));
 	}
+        
 
 	/**
 	 * Deletes a particular model.
