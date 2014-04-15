@@ -7,17 +7,22 @@
  * @property integer $id_evaluacion
  * @property integer $id_tipo_evaluacion
  * @property integer $id_clase
- * @property integer $calificacion
- * @property string $username_estudiante
  * @property integer $porcentaje
- * @property integer $numero_items
- * @property integer $duracion
+ * @property integer $tiempo_inicio
+ * @property integer $tiempo_final
  * @property integer $numero_max_tips
+ * @property integer $cant_dificil
+ * @property integer $cant_intermedio
+ * @property integer $cant_facil
+ * @property integer $puntuacion_dificil
+ * @property integer $puntuacion_intermedio
+ * @property integer $puntuacion_facil
  *
  * The followings are the available model relations:
- * @property Clase $idClase
+ * @property EstudianteEvaluacion[] $estudianteEvaluacions
  * @property TipoEvaluacion $idTipoEvaluacion
- * @property Item[] $items
+ * @property Clase $idClase
+ * @property Pregunta[] $preguntas
  */
 class Evaluacion extends CActiveRecord
 {
@@ -44,29 +49,32 @@ class Evaluacion extends CActiveRecord
 	 */
 	public function rules()
 	{
+	
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
 			array('id_tipo_evaluacion, id_clase', 'required'),
-			array('id_tipo_evaluacion, id_clase, calificacion, porcentaje, numero_items, duracion, numero_max_tips', 'numerical', 'integerOnly'=>true),
-			array('username_estudiante', 'length', 'max'=>64),
+			array('id_tipo_evaluacion, id_clase, porcentaje, numero_max_tips, cant_dificil, cant_intermedio, cant_facil, puntuacion_dificil, puntuacion_intermedio, puntuacion_facil', 'numerical', 'integerOnly'=>true),
+			array('tiempo_inicio, tiempo_final','type','type'=>'datetime','datetimeFormat'=>'yyyy-mm-dd hh:mm:ss'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id_evaluacion, id_tipo_evaluacion, id_clase, calificacion, username_estudiante, porcentaje, numero_items, duracion, numero_max_tips', 'safe', 'on'=>'search'),
+			array('id_evaluacion, id_tipo_evaluacion, id_clase, porcentaje, tiempo_inicio, tiempo_final, numero_max_tips, cant_dificil, cant_intermedio, cant_facil, puntuacion_dificil, puntuacion_intermedio, puntuacion_facil', 'safe', 'on'=>'search'),
 		);
 	}
 
 	/**
 	 * @return array relational rules.
 	 */
+	 
 	public function relations()
 	{
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idClase' => array(self::BELONGS_TO, 'Clase', 'id_clase'),
+			'estudianteEvaluacions' => array(self::HAS_MANY, 'EstudianteEvaluacion', 'id_evaluacion'),
 			'idTipoEvaluacion' => array(self::BELONGS_TO, 'TipoEvaluacion', 'id_tipo_evaluacion'),
-			'items' => array(self::HAS_MANY, 'Item', 'id_evaluacion'),
+			'idClase' => array(self::BELONGS_TO, 'Clase', 'id_clase'),
+			'preguntas' => array(self::HAS_MANY, 'Pregunta', 'id_evaluacion'),
 		);
 	}
 
@@ -79,12 +87,16 @@ class Evaluacion extends CActiveRecord
 			'id_evaluacion' => 'Id Evaluacion',
 			'id_tipo_evaluacion' => 'Id Tipo Evaluacion',
 			'id_clase' => 'Id Clase',
-			'calificacion' => 'Calificacion',
-			'username_estudiante' => 'Username Estudiante',
 			'porcentaje' => 'Porcentaje',
-			'numero_items' => 'Numero Items',
-			'duracion' => 'Duracion',
+			'tiempo_inicio' => 'Tiempo Inicio',
+			'tiempo_final' => 'Tiempo Final',
 			'numero_max_tips' => 'Numero Max Tips',
+			'cant_dificil' => 'Cant Dificil',
+			'cant_intermedio' => 'Cant Intermedio',
+			'cant_facil' => 'Cant Facil',
+			'puntuacion_dificil' => 'Puntuacion Dificil',
+			'puntuacion_intermedio' => 'Puntuacion Intermedio',
+			'puntuacion_facil' => 'Puntuacion Facil',
 		);
 	}
 
@@ -102,12 +114,16 @@ class Evaluacion extends CActiveRecord
 		$criteria->compare('id_evaluacion',$this->id_evaluacion);
 		$criteria->compare('id_tipo_evaluacion',$this->id_tipo_evaluacion);
 		$criteria->compare('id_clase',$this->id_clase);
-		$criteria->compare('calificacion',$this->calificacion);
-		$criteria->compare('username_estudiante',$this->username_estudiante,true);
 		$criteria->compare('porcentaje',$this->porcentaje);
-		$criteria->compare('numero_items',$this->numero_items);
-		$criteria->compare('duracion',$this->duracion);
+		$criteria->compare('tiempo_inicio',$this->tiempo_inicio);
+		$criteria->compare('tiempo_final',$this->tiempo_final);
 		$criteria->compare('numero_max_tips',$this->numero_max_tips);
+		$criteria->compare('cant_dificil',$this->cant_dificil);
+		$criteria->compare('cant_intermedio',$this->cant_intermedio);
+		$criteria->compare('cant_facil',$this->cant_facil);
+		$criteria->compare('puntuacion_dificil',$this->puntuacion_dificil);
+		$criteria->compare('puntuacion_intermedio',$this->puntuacion_intermedio);
+		$criteria->compare('puntuacion_facil',$this->puntuacion_facil);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
