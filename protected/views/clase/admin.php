@@ -47,7 +47,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'id_clase',
 		'id_tema',
-		'nombre_tema',
+		'nombre_clase',
 		'descripcion_clase',
 		array(
 			'class'=>'CButtonColumn',

@@ -22,8 +22,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'nombre_tema'); ?>
-		<?php echo $form->textField($model,'nombre_tema',array('size'=>60,'maxlength'=>64)); ?>
+		<?php echo $form->label($model,'nombre_clase'); ?>
+		<?php echo $form->textField($model,'nombre_clase',array('size'=>60,'maxlength'=>64)); ?>
 	</div>
 
 	<div class="row">

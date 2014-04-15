@@ -79,7 +79,8 @@
 					, 'url'=>Yii::app()->user->ui->logoutUrl
 					, 'visible'=>!Yii::app()->user->isGuest),
                                 array('label'=>'Perfil'
-                                        , 'url' => array('/site/index')),
+                                        , 'url' => array('/site/index')
+										, 'visible'=>Yii::app()->user->checkAccess('Docente'))
 			),
 		)); ?>
                                 <?php 

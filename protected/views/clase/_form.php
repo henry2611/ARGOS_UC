@@ -22,9 +22,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'nombre_tema'); ?>
-		<?php echo $form->textField($model,'nombre_tema',array('size'=>60,'maxlength'=>64)); ?>
-		<?php echo $form->error($model,'nombre_tema'); ?>
+		<?php echo $form->labelEx($model,'nombre_clase'); ?>
+		<?php echo $form->textField($model,'nombre_clase',array('size'=>60,'maxlength'=>64)); ?>
+		<?php echo $form->error($model,'nombre_clase'); ?>
 	</div>
 
 	<div class="row">

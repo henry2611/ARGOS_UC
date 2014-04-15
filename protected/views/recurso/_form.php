@@ -8,7 +8,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'recurso-form',
-	'enableAjaxValidation'=>false,
+	'enableAjaxValidation'=>true,
         'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
 

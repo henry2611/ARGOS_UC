@@ -157,13 +157,6 @@ class ClaseController extends Controller
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
 	}
-        
-        public function actionUpload($id)
-	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));
-	}
 
 	/**
 	 * Performs the AJAX validation.

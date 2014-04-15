@@ -65,15 +65,19 @@ class RecursoController extends Controller
 		$model=new Recurso;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		 //$this->performAjaxValidation($model);
 
 		if(isset($_POST['Recurso']))
 		{
+                        //GENERAR UN NUMERO ALEATORIO PARA LAS CARPETAS DE IMAGENES DE LAS DIAPOSITIVAS
+                        mt_srand(time());
+                        $num_random = mt_rand(1,1000);
+                         
 			//$model->attributes=$_POST['Recurso'];
                         $model->id_clase = $_POST['Recurso']['id_clase'];
                         $model->diapositiva=CUploadedFile::getInstance($model,'diapositiva');
                         $model->nombre_recurso = $model->diapositiva->name;
-                        $aux = substr_replace($model->diapositiva->name, '', -4);
+                        $aux = substr_replace($model->diapositiva->name, '', -4).$num_random;
                         $aux = Yii::getPathOfAlias('webroot').'/resources/'.$aux;
                         $model->ubicacion_recurso = $aux.'/';
                         $model->peso_recurso = ceil($model->diapositiva->size/1024);
@@ -85,13 +89,15 @@ class RecursoController extends Controller
                                     foreach($presentation->Slides as $slide){
                                         $slideName = "Slide_" . $slide->SlideNumber;
                                         $exportFolder = realpath($aux);
-                                        $slide->Export($exportFolder."\\".$slideName.".jpg", "jpg", "1280", "800");
+                                        $slide->Export($exportFolder."\\".$slideName.".jpg", "jpg", "900", "540");
                                     }
                                     $pwrpnt->quit();
                                     
                                     $model->diapositiva->saveAs($aux.'/'.$model->diapositiva->name);
                                 }
 				$this->redirect(array('view','id'=>$model->id_recurso));
+                        }else{
+                            $this->redirect(array('update','id'=>$model->id_recurso));
                         }
 		}
 

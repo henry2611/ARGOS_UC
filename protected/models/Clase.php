@@ -6,7 +6,7 @@
  * The followings are the available columns in table 'clase':
  * @property integer $id_clase
  * @property integer $id_tema
- * @property string $nombre_tema
+ * @property string $nombre_clase
  * @property string $descripcion_clase
  *
  * The followings are the available model relations:
@@ -25,13 +25,6 @@ class Clase extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-        
-        public function primaryKey()
-        {
-            return 'id';
-            // For composite primary key, return an array like the following
-            // return array('pk1', 'pk2');
-        }
 
 	/**
 	 * @return string the associated database table name
@@ -49,13 +42,13 @@ class Clase extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_tema, nombre_tema', 'required'),
+			array('id_tema, nombre_clase', 'required'),
 			array('id_tema', 'numerical', 'integerOnly'=>true),
-			array('nombre_tema', 'length', 'max'=>64),
+			array('nombre_clase', 'length', 'max'=>64),
 			array('descripcion_clase', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id_clase, id_tema, nombre_tema, descripcion_clase', 'safe', 'on'=>'search'),
+			array('id_clase, id_tema, nombre_clase, descripcion_clase', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -81,7 +74,7 @@ class Clase extends CActiveRecord
 		return array(
 			'id_clase' => 'Id Clase',
 			'id_tema' => 'Id Tema',
-			'nombre_tema' => 'Nombre Tema',
+			'nombre_clase' => 'Nombre Clase',
 			'descripcion_clase' => 'Descripcion Clase',
 		);
 	}
@@ -99,22 +92,11 @@ class Clase extends CActiveRecord
 
 		$criteria->compare('id_clase',$this->id_clase);
 		$criteria->compare('id_tema',$this->id_tema);
-		$criteria->compare('nombre_tema',$this->nombre_tema,true);
+		$criteria->compare('nombre_clase',$this->nombre_clase,true);
 		$criteria->compare('descripcion_clase',$this->descripcion_clase,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
-        
-        public function onFileUploaded($fullFileName,$userdata) 
-        {
-        // userdata es el mismo valor que pusiste en config/main
-        // fullFileName es la ruta del archivo listo para leer.
-            $criteria = new CDbCriteria();
-            
-            $criteria->condition = 'id_clase ='.$userdata;
-            print_r($criteria);
-            
-        }
 }

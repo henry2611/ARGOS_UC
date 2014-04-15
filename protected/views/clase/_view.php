@@ -13,8 +13,8 @@
 	<?php echo CHtml::encode($data->id_tema); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('nombre_tema')); ?>:</b>
-	<?php echo CHtml::encode($data->nombre_tema); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('nombre_clase')); ?>:</b>
+	<?php echo CHtml::encode($data->nombre_clase); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('descripcion_clase')); ?>:</b>

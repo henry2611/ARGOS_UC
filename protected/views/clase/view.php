@@ -23,34 +23,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'id_clase',
 		'id_tema',
-		'nombre_tema',
+		'nombre_clase',
 		'descripcion_clase',
 	),
 )); ?>
-
-<?php
-    /*$this->widget('ext.coco.CocoWidget'
-        ,array(
-            'id'=>'cocowidget1',
-            'onCompleted'=>'function(id,filename,jsoninfo){  }',
-            'onCancelled'=>'function(id,filename){ alert("cancelled"); }',
-            'onMessage'=>'function(m){ alert(m); }',
-            'allowedExtensions'=>array('ppt'),
-            'sizeLimit'=>2000000,
-            'uploadDir' => 'Resources/',
-            // para recibir el archivo subido:
-            'receptorClassName'=>'application.models.Clase',
-            'methodName'=>'onFileUploaded',
-            'userdata'=>'Yii::app()->user->id',
-            'buttonText'=>'Cargar Diapositiva',
-        ));*/
-   ?>
-    <br/>
-    
-   <?php
-        $diapositivas = "Agregar Diapositivas";
-        $r = new Recurso;
-        echo CHtml::link($diapositivas, array('recurso/index','id'=>$model->id_clase));
-   ?>
-    
-
