@@ -3343,3 +3343,57 @@ Stack trace:
 REQUEST_URI=/Prueba1/recurso/create
 in C:\xampp\htdocs\Prueba1\protected\controllers\RecursoController.php (79)
 in C:\xampp\htdocs\Prueba1\index.php (13)
+2014/04/16 01:23:00 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/04/16 01:23:05 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/04/16 01:23:35 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/04/16 01:23:39 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/04/16 01:23:50 [rbac] [application] PERMISO REQUERIDO:
+ricardo
+iduser=3
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/04/16 01:23:53 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
