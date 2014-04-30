@@ -23,7 +23,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'clase'); ?>
-		<?php echo $form->dropDownList($model,'id_clase',CHTML::listData(Clase::model()->findAll(),'id_clase','nombre_tema'),array('empty'=>'Seleccione un tema')); ?>
+		<?php echo $form->dropDownList($model,'id_clase',CHTML::listData(Clase::model()->findAll(),'id_clase','nombre_clase'),array('empty'=>'Seleccione una clase')); ?>
 		<?php echo $form->error($model,'id_clase'); ?>
 	</div>
 

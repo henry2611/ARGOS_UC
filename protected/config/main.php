@@ -133,7 +133,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=proyecto',
+			'connectionString' => 'mysql:host=localhost;dbname=proyecto2',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',

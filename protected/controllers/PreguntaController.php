@@ -32,7 +32,7 @@ class PreguntaController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','redactar'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -101,6 +101,32 @@ class PreguntaController extends Controller
 		$this->render('update',array(
 			'model'=>$model,
 		));
+	}
+	
+	public function actionRedactar($id,$tipo)
+	{
+		$model=new Pregunta;
+		$model->id_evaluacion=($id);
+		$model->id_tipo_pregunta=($tipo);
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Pregunta']))
+		{
+			$model->attributes=$_POST['Pregunta'];
+			if($model->save()){
+				$preguntas=Pregunta::model()->findAll(array('condition'=>'id_evaluacion=:param AND id_tipo_pregunta=:param1','params'=>array('param'=>$model->id_evaluacion,'param1'=>$model->id_tipo_pregunta)));
+				echo "<h3>";
+				foreach ($preguntas as $record) {
+					echo "<li>".$record->texto_pregunta."</li>"; 
+				}
+				echo "</h3>"; 
+			}
+		}
+		else{
+		$this->render('redactar',array(
+			'model'=>$model,
+		));}
 	}
 
 	/**

@@ -71,7 +71,7 @@ class EvaluacionController extends Controller
 		{
 			$model->attributes=$_POST['Evaluacion'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id_evaluacion));
+				$this->redirect(array('/pregunta/redactar','id'=>$model->id_evaluacion,'tipo'=>'1'));
 		}
 
 		$this->render('create',array(
