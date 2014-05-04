@@ -32,7 +32,7 @@ class TemaController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update', 'temas', 'clases'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -127,6 +127,16 @@ class TemaController extends Controller
 			'dataProvider'=>$dataProvider,
 		));
 	}
+        
+        public function actionTemas($id)
+	{
+                $criteria = new CDbCriteria;
+                $criteria->compare('id_curso', $id);
+                $dataProvider=new CActiveDataProvider('Tema', array('criteria'=> $criteria));
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
 
 	/**
 	 * Manages all models.
@@ -141,6 +151,11 @@ class TemaController extends Controller
 		$this->render('admin',array(
 			'model'=>$model,
 		));
+	}
+        
+        public function actionClases($id)
+	{
+            $this->redirect(array('clase/clases', 'id'=>$id));
 	}
 
 	/**

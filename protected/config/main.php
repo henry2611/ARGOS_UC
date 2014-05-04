@@ -22,6 +22,7 @@ return array(
 		'application.modules.cruge.components.*',
 		'application.modules.cruge.extensions.crugemailer.*',
                 'application.extensions.coco.*',
+                'application.controllers.*',
 	),
 
 	'modules'=>array(

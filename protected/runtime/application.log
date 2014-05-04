@@ -3397,3 +3397,1349 @@ itemName:Docente
 in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
 in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
 in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 01:56:18 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 01:56:22 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 02:00:03 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 02:00:06 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 02:01:56 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 02:02:00 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 02:02:07 [rbac] [application] PERMISO REQUERIDO:
+ricardo
+iduser=3
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 02:02:10 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 02:02:12 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 02:04:04 [error] [exception.CException] exception 'CException' with message 'No se puede agregar "Administrador" como hijo de sí mismo.' in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeAuthManager.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\protected\modules\cruge\controllers\UiController.php(782): CrugeAuthManager->addItemChild('Administrador', 'Administrador')
+#1 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): UiController->actionRbacAjaxSetChildItem()
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#5 C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUiAccessControlFilter.php(37): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#6 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CrugeUiAccessControlFilter->preFilter(Object(CFilterChain))
+#7 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('rbacajaxsetchil...')
+#15 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/ui/rbacaj...')
+#16 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/Prueba1/cruge/ui/rbacajaxsetchilditem
+HTTP_REFERER=http://localhost/Prueba1/cruge/ui/rbacauthitemchilditems/id/Administrador
+---
+2014/05/03 02:13:28 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 02:13:33 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 02:14:04 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 02:14:07 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 02:16:13 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 02:16:16 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 02:16:30 [rbac] [application] PERMISO REQUERIDO:
+ricardo
+iduser=3
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 02:16:32 [rbac] [application] PERMISO REQUERIDO:
+invitado
+iduser=2
+tipo:rol
+itemName:Docente
+
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeUi.php (441)
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\components\CrugeWebUser.php (149)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 03:02:32 [error] [php] Undefined variable: iduser (C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php:81)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(76): CursoController->renderFile()
+#1 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#2 C:\xampp\htdocs\Prueba1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(206): CContentDecorator->run()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(300): CursoController->endWidget()
+#5 C:\xampp\htdocs\Prueba1\protected\views\layouts\column2.php(22): CursoController->endContent()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): CursoController->renderInternal()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CController.php(784): CursoController->renderFile()
+#9 C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php(128): CursoController->render()
+#10 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): CursoController->actionIndex()
+#11 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CursoController->runAction()
+#13 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CursoController->filterAccessControl()
+#16 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CursoController->runActionWithFilters()
+#19 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CursoController->run()
+#20 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/curso/index
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (81)
+in C:\xampp\htdocs\Prueba1\protected\views\layouts\column2.php (22)
+in C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php (128)
+2014/05/03 03:17:20 [error] [php] Undefined index: label (C:\xampp\htdocs\Prueba1\protected\extensions\mbmenu\MbMenu.php:172)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(147): MbMenu->init()
+#1 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(172): SiteController->createWidget()
+#2 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php(83): SiteController->widget()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#5 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#6 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#7 C:\xampp\htdocs\Prueba1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(206): CContentDecorator->run()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(300): SiteController->endWidget()
+#10 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php(10): SiteController->endContent()
+#11 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(784): SiteController->renderFile()
+#14 C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php(36): SiteController->render()
+#15 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#16 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 C:\xampp\htdocs\Prueba1\framework\web\CController.php(286): SiteController->runAction()
+#18 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#19 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): SiteController->run()
+#20 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/site/index
+in C:\xampp\htdocs\Prueba1\protected\extensions\mbmenu\MbMenu.php (172)
+in C:\xampp\htdocs\Prueba1\protected\extensions\mbmenu\MbMenu.php (99)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 03:23:44 [error] [php] Undefined index: label (C:\xampp\htdocs\Prueba1\protected\extensions\mbmenu\MbMenu.php:172)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(147): MbMenu->init()
+#1 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(172): SiteController->createWidget()
+#2 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php(83): SiteController->widget()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#5 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#6 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#7 C:\xampp\htdocs\Prueba1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(206): CContentDecorator->run()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(300): SiteController->endWidget()
+#10 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php(10): SiteController->endContent()
+#11 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(784): SiteController->renderFile()
+#14 C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php(36): SiteController->render()
+#15 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#16 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 C:\xampp\htdocs\Prueba1\framework\web\CController.php(286): SiteController->runAction()
+#18 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#19 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): SiteController->run()
+#20 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/site/index
+in C:\xampp\htdocs\Prueba1\protected\extensions\mbmenu\MbMenu.php (172)
+in C:\xampp\htdocs\Prueba1\protected\extensions\mbmenu\MbMenu.php (99)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 03:26:43 [error] [php] Undefined index: label (C:\xampp\htdocs\Prueba1\protected\extensions\mbmenu\MbMenu.php:172)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(147): MbMenu->init()
+#1 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(172): SiteController->createWidget()
+#2 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php(83): SiteController->widget()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#5 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#6 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#7 C:\xampp\htdocs\Prueba1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(206): CContentDecorator->run()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(300): SiteController->endWidget()
+#10 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php(10): SiteController->endContent()
+#11 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(784): SiteController->renderFile()
+#14 C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php(36): SiteController->render()
+#15 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#16 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 C:\xampp\htdocs\Prueba1\framework\web\CController.php(286): SiteController->runAction()
+#18 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#19 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): SiteController->run()
+#20 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/site/index
+in C:\xampp\htdocs\Prueba1\protected\extensions\mbmenu\MbMenu.php (172)
+in C:\xampp\htdocs\Prueba1\protected\extensions\mbmenu\MbMenu.php (99)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 03:28:16 [error] [php] Undefined index: label (C:\xampp\htdocs\Prueba1\protected\extensions\mbmenu\MbMenu.php:172)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(147): MbMenu->init()
+#1 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(172): SiteController->createWidget()
+#2 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php(83): SiteController->widget()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#5 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#6 C:\xampp\htdocs\Prueba1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#7 C:\xampp\htdocs\Prueba1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(206): CContentDecorator->run()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(300): SiteController->endWidget()
+#10 C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\column1.php(10): SiteController->endContent()
+#11 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(784): SiteController->renderFile()
+#14 C:\xampp\htdocs\Prueba1\protected\controllers\SiteController.php(36): SiteController->render()
+#15 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#16 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 C:\xampp\htdocs\Prueba1\framework\web\CController.php(286): SiteController->runAction()
+#18 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#19 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): SiteController->run()
+#20 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/site/index
+in C:\xampp\htdocs\Prueba1\protected\extensions\mbmenu\MbMenu.php (172)
+in C:\xampp\htdocs\Prueba1\protected\extensions\mbmenu\MbMenu.php (99)
+in C:\xampp\htdocs\Prueba1\themes\newssourcefinal\views\layouts\main.php (83)
+2014/05/03 03:52:19 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_user' in 'where clause'. La sentencia SQL ejecutada fue: SELECT `username`
+FROM `cruge_user`
+WHERE id_user=:id.
+in C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php (127)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2014/05/03 03:52:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_user' in 'where clause'. The SQL statement executed was: SELECT `username`
+FROM `cruge_user`
+WHERE id_user=:id' in C:\xampp\htdocs\Prueba1\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php(127): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): CursoController->actionIndex()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('index')
+#12 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/index')
+#13 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/Prueba1/curso/index
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/03 03:53:26 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_user' in 'where clause'. La sentencia SQL ejecutada fue: SELECT `username`
+FROM `cruge_user`
+WHERE id_user=4.
+in C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php (127)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2014/05/03 03:53:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_user' in 'where clause'. The SQL statement executed was: SELECT `username`
+FROM `cruge_user`
+WHERE id_user=4' in C:\xampp\htdocs\Prueba1\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php(127): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): CursoController->actionIndex()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('index')
+#12 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/index')
+#13 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/Prueba1/curso/index
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/03 03:54:11 [error] [php] Array to string conversion (C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php:129)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CursoController->runAction()
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CursoController->filterAccessControl()
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CursoController->runActionWithFilters()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CursoController->run()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/curso/index
+in C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php (129)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2014/05/03 03:56:52 [error] [php] Array to string conversion (C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php:129)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CursoController->runAction()
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CursoController->filterAccessControl()
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CursoController->runActionWithFilters()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CursoController->run()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/curso/index
+in C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php (129)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2014/05/03 03:58:41 [error] [php] Array to string conversion (C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php:129)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CursoController->runAction()
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CursoController->filterAccessControl()
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CursoController->runActionWithFilters()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CursoController->run()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/curso/index
+in C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php (129)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2014/05/03 03:59:02 [error] [php] Array to string conversion (C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php:129)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CursoController->runAction()
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CursoController->filterAccessControl()
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CursoController->runActionWithFilters()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CursoController->run()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/curso/index
+in C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php (129)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2014/05/03 04:06:28 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profesor1' in 'where clause'. La sentencia SQL ejecutada fue: SELECT COUNT(*) FROM `curso` `t` WHERE username_docente=profesor1.
+in C:\xampp\htdocs\Prueba1\protected\views\curso\index.php (20)
+in C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php (133)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2014/05/03 04:06:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profesor1' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `curso` `t` WHERE username_docente=profesor1' in C:\xampp\htdocs\Prueba1\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\db\CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\Prueba1\framework\db\ar\CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\Prueba1\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\Prueba1\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\xampp\htdocs\Prueba1\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#7 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CListView.php(203): CBaseListView->init()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\xampp\htdocs\Prueba1\protected\views\curso\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#12 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\Prueba1\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php(133): CController->render('index', Array)
+#16 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): CursoController->actionIndex()
+#17 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('index')
+#26 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/index')
+#27 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#28 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Prueba1/curso/index
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/03 04:10:14 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column '$user' in 'where clause'. La sentencia SQL ejecutada fue: SELECT COUNT(*) FROM `curso` `t` WHERE username_docente=$user.
+in C:\xampp\htdocs\Prueba1\protected\views\curso\index.php (20)
+in C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php (133)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2014/05/03 04:10:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column '$user' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `curso` `t` WHERE username_docente=$user' in C:\xampp\htdocs\Prueba1\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\db\CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\Prueba1\framework\db\ar\CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\Prueba1\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\Prueba1\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\xampp\htdocs\Prueba1\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#7 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CListView.php(203): CBaseListView->init()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\xampp\htdocs\Prueba1\protected\views\curso\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#12 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\Prueba1\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php(133): CController->render('index', Array)
+#16 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): CursoController->actionIndex()
+#17 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('index')
+#26 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/index')
+#27 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#28 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Prueba1/curso/index
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/03 04:13:36 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profesor1' in 'where clause'. La sentencia SQL ejecutada fue: SELECT COUNT(*) FROM `curso` `t` WHERE username_docente=profesor1.
+in C:\xampp\htdocs\Prueba1\protected\views\curso\index.php (20)
+in C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php (133)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2014/05/03 04:13:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profesor1' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `curso` `t` WHERE username_docente=profesor1' in C:\xampp\htdocs\Prueba1\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\db\CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\Prueba1\framework\db\ar\CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\Prueba1\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\Prueba1\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\xampp\htdocs\Prueba1\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#7 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CListView.php(203): CBaseListView->init()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\xampp\htdocs\Prueba1\protected\views\curso\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#12 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\Prueba1\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php(133): CController->render('index', Array)
+#16 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): CursoController->actionIndex()
+#17 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('index')
+#26 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/index')
+#27 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#28 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Prueba1/curso/index
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/03 04:15:14 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profesor1' in 'where clause'. La sentencia SQL ejecutada fue: SELECT COUNT(*) FROM `curso` `t` WHERE username_docente=profesor1.
+in C:\xampp\htdocs\Prueba1\protected\views\curso\index.php (20)
+in C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php (133)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2014/05/03 04:15:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profesor1' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `curso` `t` WHERE username_docente=profesor1' in C:\xampp\htdocs\Prueba1\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\db\CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\Prueba1\framework\db\ar\CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\Prueba1\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\Prueba1\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\xampp\htdocs\Prueba1\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#7 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CListView.php(203): CBaseListView->init()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\xampp\htdocs\Prueba1\protected\views\curso\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#12 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\Prueba1\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php(133): CController->render('index', Array)
+#16 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(49): CursoController->actionIndex()
+#17 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('index')
+#26 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/index')
+#27 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#28 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Prueba1/curso/index
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/03 23:01:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexdocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexdoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexdocente
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/03 23:02:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexdocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexdoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexdocente
+HTTP_REFERER=http://localhost/Prueba1/curso/indexdocente
+---
+2014/05/03 23:03:01 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\Prueba1\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/view')
+#10 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Prueba1/curso/view
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/03 23:07:14 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\Prueba1\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/view')
+#10 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Prueba1/curso/view
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/03 23:10:19 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\Prueba1\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/view')
+#10 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Prueba1/curso/view
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/03 23:13:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexdocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexdoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexdocente
+---
+2014/05/03 23:14:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexdocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexdoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexdocente
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/03 23:15:26 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\xampp\htdocs\Prueba1\protected\modules\cruge\controllers\UiController.php (158)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2014/05/03 23:15:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexdocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexdoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexdocente
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/03 23:18:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexdocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexdoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexdocente
+HTTP_REFERER=http://localhost/Prueba1/curso/indexdocente
+---
+2014/05/03 23:19:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexdocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexdoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexdocente
+---
+2014/05/03 23:19:11 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexDocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexDoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexDocente
+---
+2014/05/03 23:30:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexDocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexDoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexDocente
+---
+2014/05/03 23:30:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexdocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexdoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexdocente
+---
+2014/05/03 23:30:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexDocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexDoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexDocente
+---
+2014/05/03 23:30:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexdocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexdoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexdocente
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/03 23:31:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexdocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexdoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexdocente
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/03 23:35:21 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexdocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexdoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexdocente
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/03 23:38:22 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexdocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexdoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexdocente
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/03 23:39:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexdocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexdoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexdocente
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/04 00:03:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexdocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexdoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexdocente
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/04 00:05:21 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexdocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexdoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexdocente
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/04 00:07:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('indexdocente')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/indexdoce...')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/indexdocente
+HTTP_REFERER=http://localhost/Prueba1/site/index
+---
+2014/05/04 00:21:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/admin')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/admin
+HTTP_REFERER=http://localhost/Prueba1/curso/indexdocente
+---
+2014/05/04 00:21:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/admin')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/admin
+HTTP_REFERER=http://localhost/Prueba1/curso/indexdocente
+---
+2014/05/04 01:25:12 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/admin')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/admin
+HTTP_REFERER=http://localhost/Prueba1/curso/indexdocente
+---
+2014/05/04 07:28:32 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\Prueba1\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/view')
+#10 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Prueba1/curso/view
+HTTP_REFERER=http://localhost/Prueba1/curso/1
+---
+2014/05/04 07:29:57 [error] [php] Undefined variable: data (C:\xampp\htdocs\Prueba1\protected\views\curso\view.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(869): CursoController->renderFile()
+#1 C:\xampp\htdocs\Prueba1\framework\web\CController.php(782): CursoController->renderPartial()
+#2 C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php(56): CursoController->render()
+#3 unknown(0): CursoController->actionView()
+#4 C:\xampp\htdocs\Prueba1\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CursoController->runAction()
+#8 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CursoController->filterAccessControl()
+#11 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CursoController->runActionWithFilters()
+#14 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CursoController->run()
+#15 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/curso/1
+in C:\xampp\htdocs\Prueba1\protected\views\curso\view.php (15)
+in C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php (56)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2014/05/04 08:35:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('temas')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/temas')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/curso/temas/1
+HTTP_REFERER=http://localhost/Prueba1/curso/1
+---
+2014/05/04 08:38:10 [error] [exception.CException] exception 'CException' with message 'Propiedad "Tema"."nombre_curso" no se encuentra definida.' in C:\xampp\htdocs\Prueba1\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\db\ar\CActiveRecord.php(143): CComponent->__get('nombre_curso')
+#1 C:\xampp\htdocs\Prueba1\protected\views\curso\_view.php(9): CActiveRecord->__get('nombre_curso')
+#2 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(130): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, false)
+#4 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CListView.php(281): CBaseController->renderFile('C:\xampp\htdocs...', Array)
+#5 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CBaseListView.php(160): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CBaseListView.php(128): CBaseListView->renderContent()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(173): CBaseListView->run()
+#10 C:\xampp\htdocs\Prueba1\protected\views\tema\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#12 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\Prueba1\framework\web\CController.php(782): CController->renderPartial('/tema/index', Array, true)
+#15 C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php(168): CController->render('/tema/index', Array)
+#16 [internal function]: CursoController->actionTemas('1')
+#17 C:\xampp\htdocs\Prueba1\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CursoController), Array)
+#18 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CursoController), Object(ReflectionMethod), Array)
+#19 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#26 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('temas')
+#28 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/temas')
+#29 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#30 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/Prueba1/curso/temas/1
+HTTP_REFERER=http://localhost/Prueba1/curso/1
+---
+2014/05/04 08:38:34 [error] [exception.CException] exception 'CException' with message 'Propiedad "Tema"."nombre_curso" no se encuentra definida.' in C:\xampp\htdocs\Prueba1\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\db\ar\CActiveRecord.php(143): CComponent->__get('nombre_curso')
+#1 C:\xampp\htdocs\Prueba1\protected\views\curso\_view.php(9): CActiveRecord->__get('nombre_curso')
+#2 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(130): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, false)
+#4 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CListView.php(281): CBaseController->renderFile('C:\xampp\htdocs...', Array)
+#5 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CBaseListView.php(160): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 C:\xampp\htdocs\Prueba1\framework\zii\widgets\CBaseListView.php(128): CBaseListView->renderContent()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(173): CBaseListView->run()
+#10 C:\xampp\htdocs\Prueba1\protected\views\tema\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#12 C:\xampp\htdocs\Prueba1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\Prueba1\framework\web\CController.php(782): CController->renderPartial('/tema/index', Array, true)
+#15 C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php(168): CController->render('/tema/index', Array)
+#16 [internal function]: CursoController->actionTemas('1')
+#17 C:\xampp\htdocs\Prueba1\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CursoController), Array)
+#18 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CursoController), Object(ReflectionMethod), Array)
+#19 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#26 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('temas')
+#28 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/temas')
+#29 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#30 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/Prueba1/curso/temas/1
+HTTP_REFERER=http://localhost/Prueba1/curso/1
+---
+2014/05/04 08:41:29 [error] [php] Undefined variable: model (C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php:167)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CursoController->runAction()
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CursoController->filterAccessControl()
+#6 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CursoController->runActionWithFilters()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CursoController->run()
+#10 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/curso/temas/1
+in C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php (167)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2014/05/04 08:45:08 [error] [exception.CException] exception 'CException' with message 'Tema y sus behaviors no tienen un método o closure llamado "render".' in C:\xampp\htdocs\Prueba1\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\db\ar\CActiveRecord.php(225): CComponent->__call('render', Array)
+#1 C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php(169): CActiveRecord->__call('render', Array)
+#2 C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php(169): Tema->render('index', Array)
+#3 [internal function]: CursoController->actionTemas('1')
+#4 C:\xampp\htdocs\Prueba1\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CursoController), Array)
+#5 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CursoController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('temas')
+#15 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/temas')
+#16 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/Prueba1/curso/temas/1
+HTTP_REFERER=http://localhost/Prueba1/curso/1
+---
+2014/05/04 08:50:46 [error] [php] include(TemaController.php): failed to open stream: No such file or directory (C:\xampp\htdocs\Prueba1\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php(163): spl_autoload_call()
+#1 unknown(0): CursoController->actionTemas()
+#2 C:\xampp\htdocs\Prueba1\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CursoController->runAction()
+#6 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CursoController->filterAccessControl()
+#9 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CursoController->runActionWithFilters()
+#12 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CursoController->run()
+#13 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/curso/temas/1
+in C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php (163)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2014/05/04 08:52:51 [error] [php] Non-static method TemaController::actionTemas() should not be called statically, assuming $this from incompatible context (C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php:163)
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\Prueba1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CursoController->runAction()
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CursoController->filterAccessControl()
+#6 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CursoController->runActionWithFilters()
+#9 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CursoController->run()
+#10 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\Prueba1\index.php(13): CWebApplication->run()
+REQUEST_URI=/Prueba1/curso/temas/1
+in C:\xampp\htdocs\Prueba1\protected\controllers\CursoController.php (163)
+in C:\xampp\htdocs\Prueba1\index.php (13)
+2014/05/04 09:09:00 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\Prueba1\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('temas')
+#9 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/temas/tem...')
+#10 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Prueba1/curso/temas/tema/temas
+HTTP_REFERER=http://localhost/Prueba1/curso/1
+---
+2014/05/04 09:09:23 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\Prueba1\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('temas')
+#9 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('curso/temas/tem...')
+#10 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Prueba1/curso/temas/tema/index
+HTTP_REFERER=http://localhost/Prueba1/curso/1
+---
+2014/05/04 09:11:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('temas')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('tema/temas')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/tema/temas/1
+HTTP_REFERER=http://localhost/Prueba1/curso/1
+---
+2014/05/04 22:59:41 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\Prueba1\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('temas')
+#9 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('tema/temas')
+#10 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Prueba1/tema/temas
+---
+2014/05/04 23:11:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('clases')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('tema/clases')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/tema/clases/1
+HTTP_REFERER=http://localhost/Prueba1/tema/1
+---
+2014/05/04 23:11:27 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\Prueba1\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Prueba1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Prueba1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Prueba1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Prueba1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Prueba1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(282): CController->run('clases')
+#8 C:\xampp\htdocs\Prueba1\framework\web\CWebApplication.php(141): CWebApplication->runController('tema/clases')
+#9 C:\xampp\htdocs\Prueba1\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Prueba1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Prueba1/tema/clases/1
+HTTP_REFERER=http://localhost/Prueba1/tema/1
+---

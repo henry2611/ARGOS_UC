@@ -2,13 +2,8 @@
 /* @var $this CursoController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
-	'Cursos',
-);
-
 $this->menu=array(
-	array('label'=>'Create Curso', 'url'=>array('create')),
-	array('label'=>'Manage Curso', 'url'=>array('admin')),
+	array('label'=>'Nuevo Curso', 'url'=>array('create')),
 );
 ?>
 

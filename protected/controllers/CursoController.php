@@ -32,7 +32,7 @@ class CursoController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update', 'indexdocente', 'temas'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -51,8 +51,10 @@ class CursoController extends Controller
 	 */
 	public function actionView($id)
 	{
+            $temas = new Tema;
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+                        'temas'=>$temas,
 		));
 	}
 
@@ -126,6 +128,39 @@ class CursoController extends Controller
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
+	}
+        
+        public function actionIndexDocente()
+	{
+            $id = Yii::app()->user->id;
+            //$user = Yii::app()->db->createCommand('SELECT username FROM cruge_user WHERE iduser='.$id)->queryScalar();
+            $user = Yii::app()->db->createCommand()->select('username')->from('cruge_user')
+                ->where('iduser='.$id)->queryScalar();
+            $criteria = new CDbCriteria;
+            $criteria->compare('username_docente', $user);
+		$dataProvider=new CActiveDataProvider('Curso', array('criteria'=> $criteria));
+		$this->render('indexdocente',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
+        
+        public function actionIndexEstudiante()
+	{
+            $id = Yii::app()->user->id;
+            //$user = Yii::app()->db->createCommand('SELECT username FROM cruge_user WHERE iduser='.$id)->queryScalar();
+            $user = Yii::app()->db->createCommand()->select('username')->from('cruge_user')
+                ->where('iduser='.$id)->queryScalar();
+            $criteria = new CDbCriteria;
+            $criteria->compare('username_docente', $user);
+		$dataProvider=new CActiveDataProvider('Curso', array('criteria'=> $criteria));
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
+        
+        public function actionTemas($id)
+	{
+            $this->redirect(array('tema/temas', 'id'=>$id));
 	}
 
 	/**

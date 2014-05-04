@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Create Tema', 'url'=>array('create')),
-	array('label'=>'Manage Tema', 'url'=>array('admin')),
+	//array('label'=>'Manage Tema', 'url'=>array('admin')),
 );
 ?>
 

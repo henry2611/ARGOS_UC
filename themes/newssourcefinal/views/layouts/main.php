@@ -78,19 +78,16 @@
 				array('label'=>'Logout ('.Yii::app()->user->name.')'
 					, 'url'=>Yii::app()->user->ui->logoutUrl
 					, 'visible'=>!Yii::app()->user->isGuest),
-                                array('label'=>'Perfil'
-                                        , 'url' => array('/site/index')
-										, 'visible'=>Yii::app()->user->checkAccess('Docente'))
 			),
 		)); ?>
                                 <?php 
-                                    /*$iduser = Yii::app()->user->id;
+                                    $iduser = Yii::app()->user->id;
                                     $this->widget(
                                         'ext.emenu.EMenu',array(
                                         'theme'=>'adobe',
                                         'items'=>Yii::app()->user->rbac->getMenu($iduser)  // <--- AQUI
 ));
-                                */?>
+                                ?>
 		</div>
         </nav>
 	<div id="wrapper"><!-- #wrapper -->

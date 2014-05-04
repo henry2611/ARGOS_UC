@@ -32,7 +32,7 @@ class ClaseController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update', 'clases'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -140,6 +140,16 @@ class ClaseController extends Controller
 
 		$this->render('admin',array(
 			'model'=>$model,
+		));
+	}
+        
+        public function actionClases($id)
+	{
+                $criteria = new CDbCriteria;
+                $criteria->compare('id_tema', $id);
+                $dataProvider=new CActiveDataProvider('Clase', array('criteria'=> $criteria));
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
 		));
 	}
 
