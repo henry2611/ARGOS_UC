@@ -16,12 +16,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'tipo_evaluacion'); ?>
-		<?php echo $form->dropDownList($model,'id_tipo_evaluacion',CHTML::listData(TipoEvaluacion::model()->findAll(),'id_tipo_evaluacion','nombre_evaluacion'),array('empty'=>'Seleccione un tipo')); ?>
-		<?php echo $form->error($model,'id_tipo_evaluacion'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'clase'); ?>
 		<?php echo $form->dropDownList($model,'id_clase',CHTML::listData(Clase::model()->findAll(),'id_clase','nombre_clase'),array('empty'=>'Seleccione una clase')); ?>
 		<?php echo $form->error($model,'id_clase'); ?>

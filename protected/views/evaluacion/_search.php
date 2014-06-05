@@ -17,11 +17,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'id_tipo_evaluacion'); ?>
-		<?php echo $form->textField($model,'id_tipo_evaluacion'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'id_clase'); ?>
 		<?php echo $form->textField($model,'id_clase'); ?>
 	</div>

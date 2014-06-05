@@ -53,12 +53,12 @@ class Evaluacion extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_tipo_evaluacion, id_clase', 'required'),
-			array('id_tipo_evaluacion, id_clase, porcentaje, numero_max_tips, cant_dificil, cant_intermedio, cant_facil, puntuacion_dificil, puntuacion_intermedio, puntuacion_facil', 'numerical', 'integerOnly'=>true),
+			array('id_clase', 'required'),
+			array('id_clase, porcentaje, numero_max_tips, cant_dificil, cant_intermedio, cant_facil, puntuacion_dificil, puntuacion_intermedio, puntuacion_facil', 'numerical', 'integerOnly'=>true),
 			array('tiempo_inicio, tiempo_final','type','type'=>'datetime','datetimeFormat'=>'yyyy-mm-dd hh:mm:ss'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id_evaluacion, id_tipo_evaluacion, id_clase, porcentaje, tiempo_inicio, tiempo_final, numero_max_tips, cant_dificil, cant_intermedio, cant_facil, puntuacion_dificil, puntuacion_intermedio, puntuacion_facil', 'safe', 'on'=>'search'),
+			array('id_evaluacion, id_clase, porcentaje, tiempo_inicio, tiempo_final, numero_max_tips, cant_dificil, cant_intermedio, cant_facil, puntuacion_dificil, puntuacion_intermedio, puntuacion_facil', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -72,7 +72,6 @@ class Evaluacion extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'estudianteEvaluacions' => array(self::HAS_MANY, 'EstudianteEvaluacion', 'id_evaluacion'),
-			'idTipoEvaluacion' => array(self::BELONGS_TO, 'TipoEvaluacion', 'id_tipo_evaluacion'),
 			'idClase' => array(self::BELONGS_TO, 'Clase', 'id_clase'),
 			'preguntas' => array(self::HAS_MANY, 'Pregunta', 'id_evaluacion'),
 		);
@@ -85,7 +84,6 @@ class Evaluacion extends CActiveRecord
 	{
 		return array(
 			'id_evaluacion' => 'Id Evaluacion',
-			'id_tipo_evaluacion' => 'Id Tipo Evaluacion',
 			'id_clase' => 'Id Clase',
 			'porcentaje' => 'Porcentaje',
 			'tiempo_inicio' => 'Tiempo Inicio',
@@ -112,7 +110,6 @@ class Evaluacion extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id_evaluacion',$this->id_evaluacion);
-		$criteria->compare('id_tipo_evaluacion',$this->id_tipo_evaluacion);
 		$criteria->compare('id_clase',$this->id_clase);
 		$criteria->compare('porcentaje',$this->porcentaje);
 		$criteria->compare('tiempo_inicio',$this->tiempo_inicio);

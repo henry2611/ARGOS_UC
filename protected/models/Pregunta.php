@@ -7,6 +7,7 @@
  * @property integer $id_pregunta
  * @property integer $id_evaluacion
  * @property integer $id_tipo_pregunta
+ * @property integer $id_clase_pregunta
  * @property string $texto_pregunta
  *
  * The followings are the available model relations:
@@ -42,11 +43,11 @@ class Pregunta extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_evaluacion, id_tipo_pregunta, texto_pregunta', 'required'),
-			array('id_evaluacion, id_tipo_pregunta', 'numerical', 'integerOnly'=>true),
+			array('id_evaluacion, id_tipo_pregunta, id_clase_pregunta, texto_pregunta', 'required'),
+			array('id_evaluacion, id_tipo_pregunta, id_clase_pregunta', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id_pregunta, id_evaluacion, id_tipo_pregunta, texto_pregunta', 'safe', 'on'=>'search'),
+			array('id_pregunta, id_evaluacion, id_tipo_pregunta, id_clase_pregunta, texto_pregunta', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,6 +60,7 @@ class Pregunta extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'idTipoPregunta' => array(self::BELONGS_TO, 'TipoPregunta', 'id_tipo_pregunta'),
+			'idClasePregunta' => array(self::BELONGS_TO, 'ClasePregunta', 'id_clase_pregunta'),
 			'idEvaluacion' => array(self::BELONGS_TO, 'Evaluacion', 'id_evaluacion'),
 			'respuestas' => array(self::HAS_MANY, 'Respuesta', 'id_pregunta'),
 		);
@@ -73,6 +75,7 @@ class Pregunta extends CActiveRecord
 			'id_pregunta' => 'Id Pregunta',
 			'id_evaluacion' => 'Id Evaluacion',
 			'id_tipo_pregunta' => 'Id Tipo Pregunta',
+			'id_clase_pregunta' => 'Id Clase Pregunta',
 			'texto_pregunta' => 'Texto Pregunta',
 		);
 	}
@@ -91,6 +94,7 @@ class Pregunta extends CActiveRecord
 		$criteria->compare('id_pregunta',$this->id_pregunta);
 		$criteria->compare('id_evaluacion',$this->id_evaluacion);
 		$criteria->compare('id_tipo_pregunta',$this->id_tipo_pregunta);
+		$criteria->compare('id_clase_pregunta',$this->id_clase_pregunta);
 		$criteria->compare('texto_pregunta',$this->texto_pregunta,true);
 
 		return new CActiveDataProvider($this, array(

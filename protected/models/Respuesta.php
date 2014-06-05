@@ -43,10 +43,11 @@ class Respuesta extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('id_pregunta, id_tipo_respuesta, texto_respuesta', 'required'),
+			array('texto_respuesta_b', 'safe'),
 			array('id_pregunta, id_tipo_respuesta', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id_respuesta, id_pregunta, id_tipo_respuesta, texto_respuesta', 'safe', 'on'=>'search'),
+			array('id_respuesta, id_pregunta, id_tipo_respuesta, texto_respuesta, texto_respuesta_b', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -74,6 +75,7 @@ class Respuesta extends CActiveRecord
 			'id_pregunta' => 'Id Pregunta',
 			'id_tipo_respuesta' => 'Id Tipo Respuesta',
 			'texto_respuesta' => 'Texto Respuesta',
+			'texto_respuesta_b' => 'Texto Respuesta',
 		);
 	}
 
@@ -92,6 +94,7 @@ class Respuesta extends CActiveRecord
 		$criteria->compare('id_pregunta',$this->id_pregunta);
 		$criteria->compare('id_tipo_respuesta',$this->id_tipo_respuesta);
 		$criteria->compare('texto_respuesta',$this->texto_respuesta,true);
+		$criteria->compare('texto_respuesta_b',$this->texto_respuesta_b,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

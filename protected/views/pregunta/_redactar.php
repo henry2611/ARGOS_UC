@@ -11,8 +11,8 @@
 	'enableAjaxValidation'=>false,
 	'htmlOptions'=>array(
 		'onsubmit'=>"return false;",/* Disable normal form submit */
-		'onkeypress'=>" if(event.keyCode == 13){ sendSubmit(); }"
-),)); ?>
+		'onkeypress'=>" if(event.keyCode == 13){ sendSubmit(); }"),
+)); ?>
 
 
 <?php $evaluacion=Evaluacion::model()->find($model->id_evaluacion);?>
@@ -32,13 +32,18 @@
 
 	<?php echo $form->errorSummary($model);?>
 	
-
+	<div class="row">
+		<?php echo $form->labelEx($model,'clase_pregunta'); ?>
+		<?php echo $form->dropDownList($model,'id_clase_pregunta',CHTML::listData(ClasePregunta::model()->findAll(),'id_clase_pregunta','nombre_clase_pregunta'),array('empty'=>'Seleccione tipo de pregunta')); ?>
+		<?php echo $form->error($model,'id_clase_pregunta'); ?>
+	</div>
+	
 	<div class="row", id="textField">
 		<?php echo $form->labelEx($model,'texto_pregunta'); ?>
 		<?php echo $form->textArea($model,'texto_pregunta',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'texto_pregunta'); ?>
 	</div>
-
+	
 	<div class="row buttons">
 		<span>
 		<?php echo CHtml::Button('Submit',array('onclick'=>'sendSubmit();')); ?>
@@ -62,7 +67,6 @@
 
 </div><!-- form -->
 
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript">
 function sendSubmit() {
   var data=$("#redactar").serialize();
@@ -94,7 +98,7 @@ function nextPage(){
 		
 		
 	}else{
-		window.location="<?php echo Yii::app()->createAbsoluteUrl("respuesta/create",array('id'=>$model->id_evaluacion));?>";
+		window.location="<?php echo Yii::app()->createAbsoluteUrl("respuesta/redactar",array('id'=>$model->id_evaluacion,'tipo'=>'1'));?>";
 	}
 }
 </script>

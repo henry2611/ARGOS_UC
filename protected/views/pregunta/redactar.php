@@ -13,7 +13,7 @@ $this->menu=array(
 	array('label'=>'Manage Pregunta', 'url'=>array('admin')),
 );
 ?>
-
+<?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 <h1>Create Preguntas 
 	<?php $pregunta=TipoPregunta::model()->find(array('select'=>'nombre_tipo_pregunta','condition'=>'id_tipo_pregunta=:param1','params'=>array(':param1'=>$model->id_tipo_pregunta)));	
 	echo CHtml::encode($pregunta->nombre_tipo_pregunta);

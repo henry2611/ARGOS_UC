@@ -22,7 +22,6 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id_evaluacion',
-		'id_tipo_evaluacion',
 		'id_clase',
 		'porcentaje',
 		'tiempo_inicio',

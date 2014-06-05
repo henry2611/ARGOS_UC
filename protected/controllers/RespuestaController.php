@@ -32,7 +32,7 @@ class RespuestaController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','redactar'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -77,6 +77,37 @@ class RespuestaController extends Controller
 		$this->render('create',array(
 			'model'=>$model,
 		));
+	}
+	
+	public function actionRedactar($id,$tipo)
+	{
+		$model=new Respuesta;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Respuesta']))
+		{
+			$model->attributes=$_POST['Respuesta'];
+			if($model->save()){
+				$respuestas=Respuesta::model()->findAll(array('condition'=>'id_pregunta=:param','params'=>array('param'=>$model->id_pregunta)));
+				$preg=Pregunta::model()->findByPk($model->id_pregunta);
+				echo "<h3>";
+				foreach ($respuestas as $record) {
+					if($preg->id_clase_pregunta!=4){
+						echo "<li>".$record->texto_respuesta."</li>";
+					}else{
+						echo "<li>".$record->texto_respuesta." -- ".$record->texto_respuesta_b."</li>";
+					}	
+				}
+				echo "</h3>"; 
+			}
+		}
+		else{
+		$this->render('redactar',array(
+			'model'=>$model,
+		));
+		}
 	}
 
 	/**

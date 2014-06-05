@@ -49,9 +49,9 @@ return array(
 				'baseUrl'=>'http://coco.com/',
 
 				 // NO OLVIDES PONER EN FALSE TRAS INSTALAR
-				 'debug'=>true,
+				 'debug'=>false,
 				 'rbacSetupEnabled'=>true,
-				 'allowUserAlways'=>true,
+				 'allowUserAlways'=>false,
 
 				// MIENTRAS INSTALAS..PONLO EN: false
 				// lee mas abajo respecto a 'Encriptando las claves'
@@ -134,7 +134,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=proyecto2',
+			'connectionString' => 'mysql:host=localhost;dbname=proyecto',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
