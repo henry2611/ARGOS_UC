@@ -5,10 +5,7 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('tipo_evaluacion')); $model=TipoEvaluacion::model()->find("id_tipo_evaluacion=:param", array("param"=>$data->id_tipo_evaluacion));?>:</b>
-	<?php echo CHtml::encode($model->nombre_evaluacion); 
-	?>
-	<br />
+	
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('clase')); $model=Clase::model()->find("id_clase=:param", array("param"=>$data->id_clase));?>:</b>
 	<?php echo CHtml::encode($model->nombre_clase); ?>

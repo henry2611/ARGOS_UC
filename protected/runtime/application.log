@@ -6556,3 +6556,150 @@ Stack trace:
 REQUEST_URI=/argos_yii/evaluacion/admin
 HTTP_REFERER=http://localhost/argos_yii/evaluacion/1
 ---
+2014/06/07 02:04:01 [error] [exception.CException] exception 'CException' with message 'El alias "application.modules.cruge.components.CrugeWebUser" es inválido. Asegúrese de que apunta a un archivo PHP y el archivo tiene permisos de lectura.' in C:\xampp\htdocs\argos_yii\framework\YiiBase.php:316
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\YiiBase.php(196): YiiBase::import('application.mod...', true)
+#1 C:\xampp\htdocs\argos_yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\argos_yii\framework\base\CModule.php(103): CModule->getComponent('user')
+#3 C:\xampp\htdocs\argos_yii\themes\newssourcefinal\views\layouts\main.php(73): CModule->__get('user')
+#4 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\argos_yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\argos_yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class ="co...')
+#8 C:\xampp\htdocs\argos_yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class ="co...')
+#9 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\xampp\htdocs\argos_yii\themes\newssourcefinal\views\layouts\column1.php(10): CBaseController->endContent()
+#12 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\argos_yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\argos_yii\protected\controllers\SiteController.php(36): CController->render('index')
+#16 C:\xampp\htdocs\argos_yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\xampp\htdocs\argos_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\argos_yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): CController->run('')
+#21 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#22 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\argos_yii\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/argos_yii/
+---
+2014/06/07 02:14:17 [error] [php] include(TipoEvaluacion.php): failed to open stream: No such file or directory (C:\xampp\htdocs\argos_yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\protected\views\evaluacion\_view.php(8): spl_autoload_call()
+#1 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(130): require()
+#2 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): EvaluacionController->renderInternal()
+#3 C:\xampp\htdocs\argos_yii\framework\zii\widgets\CListView.php(281): EvaluacionController->renderFile()
+#4 C:\xampp\htdocs\argos_yii\framework\zii\widgets\CBaseListView.php(160): CListView->renderItems()
+#5 unknown(0): CListView->renderSection()
+#6 C:\xampp\htdocs\argos_yii\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#7 C:\xampp\htdocs\argos_yii\framework\zii\widgets\CBaseListView.php(128): CListView->renderContent()
+#8 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(173): CListView->run()
+#9 C:\xampp\htdocs\argos_yii\protected\views\evaluacion\index.php(20): EvaluacionController->widget()
+#10 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(126): require()
+#11 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): EvaluacionController->renderInternal()
+#12 C:\xampp\htdocs\argos_yii\framework\web\CController.php(869): EvaluacionController->renderFile()
+#13 C:\xampp\htdocs\argos_yii\framework\web\CController.php(782): EvaluacionController->renderPartial()
+#14 C:\xampp\htdocs\argos_yii\protected\controllers\EvaluacionController.php(128): EvaluacionController->render()
+#15 C:\xampp\htdocs\argos_yii\framework\web\actions\CInlineAction.php(49): EvaluacionController->actionIndex()
+#16 C:\xampp\htdocs\argos_yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(133): EvaluacionController->runAction()
+#18 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\argos_yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#20 C:\xampp\htdocs\argos_yii\framework\web\filters\CInlineFilter.php(58): EvaluacionController->filterAccessControl()
+#21 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#22 C:\xampp\htdocs\argos_yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): EvaluacionController->runActionWithFilters()
+#24 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): EvaluacionController->run()
+#25 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#26 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\argos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/argos_yii/evaluacion/
+in C:\xampp\htdocs\argos_yii\protected\views\evaluacion\_view.php (8)
+in C:\xampp\htdocs\argos_yii\protected\views\evaluacion\index.php (20)
+in C:\xampp\htdocs\argos_yii\protected\controllers\EvaluacionController.php (128)
+2014/06/07 02:14:26 [error] [php] include(TipoEvaluacion.php): failed to open stream: No such file or directory (C:\xampp\htdocs\argos_yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\protected\views\evaluacion\_view.php(8): spl_autoload_call()
+#1 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(130): require()
+#2 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): EvaluacionController->renderInternal()
+#3 C:\xampp\htdocs\argos_yii\framework\zii\widgets\CListView.php(281): EvaluacionController->renderFile()
+#4 C:\xampp\htdocs\argos_yii\framework\zii\widgets\CBaseListView.php(160): CListView->renderItems()
+#5 unknown(0): CListView->renderSection()
+#6 C:\xampp\htdocs\argos_yii\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#7 C:\xampp\htdocs\argos_yii\framework\zii\widgets\CBaseListView.php(128): CListView->renderContent()
+#8 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(173): CListView->run()
+#9 C:\xampp\htdocs\argos_yii\protected\views\evaluacion\index.php(20): EvaluacionController->widget()
+#10 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(126): require()
+#11 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): EvaluacionController->renderInternal()
+#12 C:\xampp\htdocs\argos_yii\framework\web\CController.php(869): EvaluacionController->renderFile()
+#13 C:\xampp\htdocs\argos_yii\framework\web\CController.php(782): EvaluacionController->renderPartial()
+#14 C:\xampp\htdocs\argos_yii\protected\controllers\EvaluacionController.php(128): EvaluacionController->render()
+#15 C:\xampp\htdocs\argos_yii\framework\web\actions\CInlineAction.php(49): EvaluacionController->actionIndex()
+#16 C:\xampp\htdocs\argos_yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(133): EvaluacionController->runAction()
+#18 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\argos_yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#20 C:\xampp\htdocs\argos_yii\framework\web\filters\CInlineFilter.php(58): EvaluacionController->filterAccessControl()
+#21 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#22 C:\xampp\htdocs\argos_yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): EvaluacionController->runActionWithFilters()
+#24 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): EvaluacionController->run()
+#25 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#26 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\argos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/argos_yii/evaluacion/
+in C:\xampp\htdocs\argos_yii\protected\views\evaluacion\_view.php (8)
+in C:\xampp\htdocs\argos_yii\protected\views\evaluacion\index.php (20)
+in C:\xampp\htdocs\argos_yii\protected\controllers\EvaluacionController.php (128)
+2014/06/07 02:29:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "respuestas/redactar"' in C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('respuestas/reda...')
+#1 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\argos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/argos_yii/respuestas/redactar/1?tipo=1
+---
+2014/06/07 02:29:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "respuestas/redactar"' in C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('respuestas/reda...')
+#1 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\argos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/argos_yii/respuestas/redactar/
+---
+2014/06/07 02:29:27 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\argos_yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\argos_yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\argos_yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\argos_yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): CController->run('redactar')
+#9 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('respuesta/redac...')
+#10 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\argos_yii\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/argos_yii/respuesta/redactar/
+---
+2014/06/07 02:29:30 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\argos_yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\argos_yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\argos_yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\argos_yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): CController->run('redactar')
+#9 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('respuesta/redac...')
+#10 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\argos_yii\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/argos_yii/respuesta/redactar/1
+---
