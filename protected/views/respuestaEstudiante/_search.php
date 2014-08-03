@@ -22,8 +22,18 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'id_respuesta'); ?>
-		<?php echo $form->textField($model,'id_respuesta'); ?>
+		<?php echo $form->label($model,'id_pregunta'); ?>
+		<?php echo $form->textField($model,'id_pregunta'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'texto_respuesta'); ?>
+		<?php echo $form->textField($model,'texto_respuesta'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'texto_respuesta_b'); ?>
+		<?php echo $form->textField($model,'texto_respuesta_b'); ?>
 	</div>
 
 	<div class="row buttons">

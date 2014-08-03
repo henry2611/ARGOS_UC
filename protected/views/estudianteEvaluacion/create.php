@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List EstudianteEvaluacion', 'url'=>array('index')),
-	array('label'=>'Manage EstudianteEvaluacion', 'url'=>array('admin')),
+	array('label'=>'List Estudiante Evaluacion', 'url'=>array('index')),
+	array('label'=>'Manage Estudiante Evaluacion', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create EstudianteEvaluacion</h1>
+<h1>Create Estudiante Evaluacion</h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_create', array('model'=>$model)); ?>

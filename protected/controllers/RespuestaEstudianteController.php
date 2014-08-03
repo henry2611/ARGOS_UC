@@ -7,7 +7,6 @@ class RespuestaEstudianteController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
-
 	/**
 	 * @return array action filters
 	 */
@@ -29,7 +28,7 @@ class RespuestaEstudianteController extends Controller
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
@@ -63,20 +62,97 @@ class RespuestaEstudianteController extends Controller
 	public function actionCreate()
 	{
 		$model=new RespuestaEstudiante;
-
+		
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['RespuestaEstudiante']))
-		{
+		if(isset($_POST['RespuestaEstudiante'])){
 			$model->attributes=$_POST['RespuestaEstudiante'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id_respuesta_estudiante));
+			
+			if(is_array($_POST['RespuestaEstudiante']['texto_respuesta'])){
+				$respuestas=$_POST['RespuestaEstudiante']['texto_respuesta'];
+				foreach($respuestas as $respuesta){
+					$model->id_respuesta_estudiante=null;
+					$model->texto_respuesta=$respuesta;
+					$model->isNewRecord = true;
+					if($model->save()){
+						$estudianteevaluacion=EstudianteEvaluacion::model()->findByPk($model->id_estudiante_evaluacion);
+						$evaluacion=Evaluacion::model()->findByPk($estudianteevaluacion->id_evaluacion);
+						$preg=Pregunta::model()->findByPK($model->id_pregunta);
+						$resp=Respuesta::model()->findAll(array('condition'=>'id_pregunta=:param AND id_tipo_respuesta=:param2','params'=>array(':param'=>$model->id_pregunta,':param2'=>'1')));
+						$count=count($resp);
+						foreach ($resp as $check){
+							$a=$check->texto_respuesta;
+							
+							$c=$model->texto_respuesta;
+							
+							if($a===$c){
+								if(($preg->id_tipo_pregunta=='1')&&($check->id_tipo_respuesta=='1')){
+									$estudianteevaluacion->calificacion=$estudianteevaluacion->calificacion+($evaluacion->puntuacion_dificil)/$count;
+								}elseif(($preg->id_tipo_pregunta=='2')&&($check->id_tipo_respuesta=='1')){
+									$estudianteevaluacion->calificacion=$estudianteevaluacion->calificacion+($evaluacion->puntuacion_intermedio)/$count;
+								}elseif(($preg->id_tipo_pregunta=='3')&&($check->id_tipo_respuesta=='1')){
+									$estudianteevaluacion->calificacion=$estudianteevaluacion->calificacion+($evaluacion->puntuacion_facil)/$count;
+								}
+								$estudianteevaluacion->save();
+							}
+						}
+					}
+				}
+			}else{
+				if($model->save()){
+					$estudianteevaluacion=EstudianteEvaluacion::model()->findByPk($model->id_estudiante_evaluacion);
+					$evaluacion=Evaluacion::model()->findByPk($estudianteevaluacion->id_evaluacion);
+					$preg=Pregunta::model()->findByPK($model->id_pregunta);
+					$resp=Respuesta::model()->findAll(array('condition'=>'id_pregunta=:param','params'=>array('param'=>$model->id_pregunta)));
+					foreach ($resp as $check){
+						$a=$check->texto_respuesta;
+						$c=$model->texto_respuesta;
+							
+						if($preg->id_clase_pregunta=='4'){
+							$b=$check->texto_respuesta_b;
+							$d=$model->texto_respuesta_b;
+							$count=count($resp);
+							if(strlen(trim($b))==0){
+								$b='0';
+							}
+							if(strlen(trim($d))==0){
+								$d='0';
+							}
+							if((($a===$c)&&($b===$d))||(($a===$d)&&($b===$c))){
+								if($preg->id_tipo_pregunta=='1'){
+									$estudianteevaluacion->calificacion=$estudianteevaluacion->calificacion+($evaluacion->puntuacion_dificil)/$count;
+								}elseif($preg->id_tipo_pregunta=='2'){
+									$estudianteevaluacion->calificacion=$estudianteevaluacion->calificacion+($evaluacion->puntuacion_intermedio)/$count;
+								}elseif($preg->id_tipo_pregunta=='3'){
+									$estudianteevaluacion->calificacion=$estudianteevaluacion->calificacion+($evaluacion->puntuacion_facil)/$count;
+								}
+							}
+							$estudianteevaluacion->save();
+								
+						}else{
+							if($a===$c){
+								if(($preg->id_tipo_pregunta=='1')&&($check->id_tipo_respuesta=='1')){
+									$estudianteevaluacion->calificacion=$estudianteevaluacion->calificacion+$evaluacion->puntuacion_dificil;
+								}elseif(($preg->id_tipo_pregunta=='2')&&($check->id_tipo_respuesta=='1')){
+									$estudianteevaluacion->calificacion=$estudianteevaluacion->calificacion+$evaluacion->puntuacion_intermedio;
+								}elseif(($preg->id_tipo_pregunta=='3')&&($check->id_tipo_respuesta=='1')){
+									$estudianteevaluacion->calificacion=$estudianteevaluacion->calificacion+$evaluacion->puntuacion_facil;
+								}
+							}
+							$estudianteevaluacion->save();
+						}
+					}
+				}
+			}
 		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
+		else{
+			$model->id_estudiante_evaluacion=isset($_POST['id_estudiante_evaluacion']) ? $_POST['id_estudiante_evaluacion'] : '';
+			$tipoPregunta=isset($_POST['tipo_pregunta']) ? $_POST['tipo_pregunta'] : '';
+			$this->render('create',array(
+				'model'=>$model,'tipo_pregunta'=>$tipoPregunta,
+			));
+		}
 	}
 
 	/**
@@ -142,6 +218,14 @@ class RespuestaEstudianteController extends Controller
 			'model'=>$model,
 		));
 	}
+	
+	public function actionExamen()
+	{
+		$model=new RespuestaEstudiante;
+		
+		$model->id_estudiante_evaluacion=isset($_POST['id_evaluacion_estudiante']) ? $_POST['id_evaluacion_estudiante'] : '';
+		
+	}
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
@@ -150,6 +234,7 @@ class RespuestaEstudianteController extends Controller
 	 * @return RespuestaEstudiante the loaded model
 	 * @throws CHttpException
 	 */
+	 
 	public function loadModel($id)
 	{
 		$model=RespuestaEstudiante::model()->findByPk($id);

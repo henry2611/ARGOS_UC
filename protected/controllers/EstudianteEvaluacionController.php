@@ -29,11 +29,15 @@ class EstudianteEvaluacionController extends Controller
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','loadcursos','presentar'),
 				'users'=>array('@'),
+			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('update'),
+				'users'=>array('Docente','admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
@@ -51,6 +55,7 @@ class EstudianteEvaluacionController extends Controller
 	 */
 	public function actionView($id)
 	{
+		
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
@@ -122,7 +127,14 @@ class EstudianteEvaluacionController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('EstudianteEvaluacion');
+		$id = Yii::app()->user->id;
+		$user = Yii::app()->db->createCommand()->select('username')->from('cruge_user')
+                ->where('iduser='.$id)->queryScalar();
+		$criteria = new CDbCriteria;
+		$criteria -> select = array('x.username_estudiante','t.id_evaluacion','t.id_curso_estudiante','t.calificacion','t.id_evaluacion_estudiante');
+		$criteria -> join = 'LEFT JOIN Curso_Estudiantes x ON x.id_curso_estudiante=t.id_curso_estudiante ';
+		$criteria -> condition = 'x.username_estudiante='."'".$user."'";
+		$dataProvider=new CActiveDataProvider('EstudianteEvaluacion',array('criteria'=>$criteria));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -157,6 +169,43 @@ class EstudianteEvaluacionController extends Controller
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
 	}
+	
+	public function actionLoadcursos()
+	{
+		$cursoestudiante = isset($_POST['id_curso_estudiante']) ? $_POST['id_curso_estudiante'] : '';
+		$criteria= new CDbCriteria();
+		$criteria->select='evaluacion.id_evaluacion AS idEvaluaciones , clase.nombre_clase AS nombreClases';
+		$criteria->join ='LEFT JOIN curso ON curso.id_curso=t.id_curso ';
+		$criteria->join .='LEFT JOIN tema ON tema.id_curso=curso.id_curso ';
+		$criteria->join .='LEFT JOIN clase ON clase.id_tema=tema.id_curso ';
+		$criteria->join .='INNER JOIN evaluacion ON (evaluacion.id_clase=clase.id_clase) AND (NOW() BETWEEN evaluacion.tiempo_inicio AND evaluacion.tiempo_final)';
+		$criteria->condition= 't.id_curso_estudiante=:value';
+		$criteria->params = array(":value"=>$cursoestudiante);
+		
+		$test=CursoEstudiantes::model()->findAll($criteria);
+		
+				
+		if (is_array($test) ){
+			foreach($test as $value=>$name){
+				$criteria= new CDbCriteria();
+				$criteria->select='t.*';
+				$criteria-> condition = 't.id_evaluacion=:value AND t.id_curso_estudiante=:value2';
+				$criteria->params = array(':value'=>$name['idEvaluaciones'],':value2'=>$cursoestudiante);
+				$foo=EstudianteEvaluacion::model()->find($criteria);
+
+				if(!$foo){
+					echo CHtml::tag('option',
+						array('value'=>''.$name['idEvaluaciones']),CHtml::encode($name['nombreClases']),true);
+				}
+            }
+        } 
+        else{
+            echo CHtml::tag('option',
+                    array('value'=>''.'0'),CHtml::encode('No se encontro evaluaciones'),true);
+        }
+		
+	}
+	
 
 	/**
 	 * Performs the AJAX validation.

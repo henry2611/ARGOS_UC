@@ -13,8 +13,16 @@
 	<?php echo CHtml::encode($data->id_estudiante_evaluacion); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id_respuesta')); ?>:</b>
-	<?php echo CHtml::encode($data->id_respuesta); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('id_pregunta')); ?>:</b>
+	<?php echo CHtml::encode($data->id_pregunta); ?>
+	<br />
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('texto_respuesta')); ?>:</b>
+	<?php echo CHtml::encode($data->texto_respuesta); ?>
+	<br />
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('texto_respuesta_b')); ?>:</b>
+	<?php echo CHtml::encode($data->texto_respuesta_b); ?>
 	<br />
 
 

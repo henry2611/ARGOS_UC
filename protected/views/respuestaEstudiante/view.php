@@ -23,6 +23,8 @@ $this->menu=array(
 	'attributes'=>array(
 		'id_respuesta_estudiante',
 		'id_estudiante_evaluacion',
-		'id_respuesta',
+		'id_pregunta',
+		'texto_respuesta',
+		'texto_respuesta_b',
 	),
 )); ?>

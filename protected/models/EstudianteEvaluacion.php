@@ -21,6 +21,9 @@ class EstudianteEvaluacion extends CActiveRecord
 	 * @param string $className active record class name.
 	 * @return EstudianteEvaluacion the static model class
 	 */
+	public $prueba;
+	
+	
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);

@@ -25,7 +25,7 @@
 	'enableAjaxValidation'=>false,
 	'htmlOptions'=>array(
 		'onsubmit'=>"return false;",/* Disable normal form submit */
-		'onkeypress'=>" if(event.keyCode == 13){ sendSubmit(); }"),
+	),
 )); ?>
 
 
@@ -123,7 +123,7 @@ function sendSubmit(num,tipo) {
         });
     },
     error: function(data) { // if error occured
-      alert("Error occured.please try again");
+      alert("Error occured. Please try again");
     },
   });
 }

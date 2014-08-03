@@ -17,7 +17,7 @@ class RespuestaEstudiante extends CActiveRecord
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return RespuestaEstudiante the static model class
+	 * @return RespuesEstudiante the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -40,14 +40,15 @@ class RespuestaEstudiante extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_estudiante_evaluacion, id_respuesta', 'required'),
-			array('id_estudiante_evaluacion, id_respuesta', 'numerical', 'integerOnly'=>true),
+			array('id_estudiante_evaluacion, id_pregunta, texto_respuesta', 'required'),
+			array('texto_respuesta_b', 'safe'),
+			array('id_estudiante_evaluacion, id_pregunta', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id_respuesta_estudiante, id_estudiante_evaluacion, id_respuesta', 'safe', 'on'=>'search'),
+			array('id_respuesta_estudiante, id_estudiante_evaluacion, id_pregunta, texto_respuesta, texto_respuesta_b', 'safe', 'on'=>'search'),
 		);
 	}
-
+	
 	/**
 	 * @return array relational rules.
 	 */
@@ -56,7 +57,7 @@ class RespuestaEstudiante extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idRespuesta' => array(self::BELONGS_TO, 'Respuesta', 'id_respuesta'),
+			'idPregunta' => array(self::BELONGS_TO, 'Pregunta', 'id_pregunta'),
 			'idEstudianteEvaluacion' => array(self::BELONGS_TO, 'EstudianteEvaluacion', 'id_estudiante_evaluacion'),
 		);
 	}
@@ -69,7 +70,9 @@ class RespuestaEstudiante extends CActiveRecord
 		return array(
 			'id_respuesta_estudiante' => 'Id Respuesta Estudiante',
 			'id_estudiante_evaluacion' => 'Id Estudiante Evaluacion',
-			'id_respuesta' => 'Id Respuesta',
+			'id_pregunta' => 'Id Pregunta',
+			'texto_respuesta' => 'Texto Respuesta',
+			'texto_respuesta_b' => 'Texto Respuesta',
 		);
 	}
 
@@ -86,7 +89,9 @@ class RespuestaEstudiante extends CActiveRecord
 
 		$criteria->compare('id_respuesta_estudiante',$this->id_respuesta_estudiante);
 		$criteria->compare('id_estudiante_evaluacion',$this->id_estudiante_evaluacion);
-		$criteria->compare('id_respuesta',$this->id_respuesta);
+		$criteria->compare('id_pregunta',$this->id_pregunta);
+		$criteria->compare('texto_respuesta',$this->texto_respuesta,true);
+		$criteria->compare('texto_respuesta_b',$this->texto_respuesta_b,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -61,7 +61,6 @@ class Respuesta extends CActiveRecord
 		return array(
 			'idTipoRespuesta' => array(self::BELONGS_TO, 'TipoRespuesta', 'id_tipo_respuesta'),
 			'idPregunta' => array(self::BELONGS_TO, 'Pregunta', 'id_pregunta'),
-			'respuestaEstudiantes' => array(self::HAS_MANY, 'RespuestaEstudiante', 'id_respuesta'),
 		);
 	}
 

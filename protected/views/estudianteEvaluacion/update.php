@@ -9,10 +9,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List EstudianteEvaluacion', 'url'=>array('index')),
-	array('label'=>'Create EstudianteEvaluacion', 'url'=>array('create')),
-	array('label'=>'View EstudianteEvaluacion', 'url'=>array('view', 'id'=>$model->id_evaluacion_estudiante)),
-	array('label'=>'Manage EstudianteEvaluacion', 'url'=>array('admin')),
+	array('label'=>'List Estudiante Evaluacion', 'url'=>array('index')),
+	array('label'=>'Create Estudiante Evaluacion', 'url'=>array('create')),
+	array('label'=>'View Estudiante Evaluacion', 'url'=>array('view', 'id'=>$model->id_evaluacion_estudiante)),
+	array('label'=>'Manage Estudiante Evaluacion', 'url'=>array('admin')),
 );
 ?>
 

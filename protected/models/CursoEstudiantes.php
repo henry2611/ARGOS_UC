@@ -23,7 +23,10 @@ class CursoEstudiantes extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-
+	
+	public $idEvaluaciones;
+	public $nombreClases;
+	
 	/**
 	 * @return string the associated database table name
 	 */

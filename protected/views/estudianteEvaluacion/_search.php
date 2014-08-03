@@ -2,6 +2,7 @@
 /* @var $this EstudianteEvaluacionController */
 /* @var $model EstudianteEvaluacion */
 /* @var $form CActiveForm */
+
 ?>
 
 <div class="wide form">

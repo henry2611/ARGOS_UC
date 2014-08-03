@@ -63,6 +63,7 @@ class Pregunta extends CActiveRecord
 			'idClasePregunta' => array(self::BELONGS_TO, 'ClasePregunta', 'id_clase_pregunta'),
 			'idEvaluacion' => array(self::BELONGS_TO, 'Evaluacion', 'id_evaluacion'),
 			'respuestas' => array(self::HAS_MANY, 'Respuesta', 'id_pregunta'),
+			'respuestaEstudiantes' => array(self::HAS_MANY, 'RespuestaEstudiante', 'id_pregunta'),
 		);
 	}
 
