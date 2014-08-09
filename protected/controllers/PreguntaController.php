@@ -29,11 +29,11 @@ class PreguntaController extends Controller
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'users'=>array('Docente','admin'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update','redactar'),
-				'users'=>array('@'),
+				'users'=>array('Docente','admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
@@ -103,14 +103,11 @@ class PreguntaController extends Controller
 		));
 	}
 	
-	public function actionRedactar($id,$tipo)
+	public function actionRedactar()
 	{
 		$model=new Pregunta;
-		$model->id_evaluacion=($id);
-		$model->id_tipo_pregunta=($tipo);
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
 		if(isset($_POST['Pregunta']))
 		{
 			$model->attributes=$_POST['Pregunta'];
@@ -124,9 +121,17 @@ class PreguntaController extends Controller
 			}
 		}
 		else{
-		$this->render('redactar',array(
-			'model'=>$model,
-		));}
+			if((isset($_POST['id_evaluacion']))&&(isset($_POST['id_tipo_pregunta']))){
+				$model->id_evaluacion=isset($_POST['id_evaluacion']) ? $_POST['id_evaluacion'] : '';
+				$model->id_tipo_pregunta=isset($_POST['id_tipo_pregunta']) ? $_POST['id_tipo_pregunta'] : '';
+			}else{
+				$model->id_evaluacion=Yii::app()->session['id_evaluacion'];
+				$model->id_tipo_pregunta=Yii::app()->session['id_tipo_pregunta'];
+			}
+			$this->render('redactar',array(
+				'model'=>$model, 
+		));
+		}
 	}
 
 	/**

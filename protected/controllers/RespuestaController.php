@@ -29,11 +29,11 @@ class RespuestaController extends Controller
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'users'=>array('Docente','admin'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update','redactar'),
-				'users'=>array('@'),
+				'users'=>array('Docente','admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
@@ -79,7 +79,7 @@ class RespuestaController extends Controller
 		));
 	}
 	
-	public function actionRedactar($id,$tipo)
+	public function actionRedactar()
 	{
 		$model=new Respuesta;
 
@@ -104,8 +104,10 @@ class RespuestaController extends Controller
 			}
 		}
 		else{
-		$this->render('redactar',array(
-			'model'=>$model,
+			$idEvaluacion=isset($_POST['id_evaluacion']) ? $_POST['id_evaluacion'] : '';
+			$tipo=isset($_POST['id_tipo_pregunta']) ? $_POST['id_tipo_pregunta'] : '';
+			$this->render('redactar',array(
+				'model'=>$model,'idEvaluacion'=>$idEvaluacion,'tipo'=>$tipo,
 		));
 		}
 	}

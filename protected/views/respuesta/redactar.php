@@ -16,4 +16,4 @@ $this->menu=array(
 <?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 <h1>Create Respuesta</h1>
 
-<?php echo $this->renderPartial('_redactar', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_redactar', array('model'=>$model,'idEvaluacion'=>$idEvaluacion,'tipo'=>$tipo)); ?>

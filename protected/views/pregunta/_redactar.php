@@ -5,17 +5,7 @@
 ?>
 
 <div class="form" >
-
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'redactar',
-	'enableAjaxValidation'=>false,
-	'htmlOptions'=>array(
-		'onsubmit'=>"return false;",/* Disable normal form submit */
-		'onkeypress'=>" if(event.keyCode == 13){ sendSubmit(); }"),
-)); ?>
-
-
-<?php $evaluacion=Evaluacion::model()->find($model->id_evaluacion);?>
+<?php $evaluacion=Evaluacion::model()->findByPk($model->id_evaluacion);?>
 <?php $preguntas=Pregunta::model()->findAll(array('condition'=>'id_evaluacion=:param AND id_tipo_pregunta=:param1','params'=>array('param'=>$model->id_evaluacion,'param1'=>$model->id_tipo_pregunta)));?>
 <?php $tipo=$model->id_tipo_pregunta;?>
 <?php if($model->id_tipo_pregunta==1){
@@ -26,11 +16,38 @@
 		$cant_minima=$evaluacion->cant_facil;}
 	?>
 
+<span id="Boton_siguiente" <?php if ($cant_minima>(count ($preguntas))){echo "hidden";}?>>
+		<?php	if($tipo<3){ 
+					echo CHtml::Button('Siguiente tipo de pregunta',array('submit'=>'../pregunta/redactar','params'=>array('id_evaluacion'=>$model->id_evaluacion,'id_tipo_pregunta'=>$tipo+1))); 
+				}else{ 
+					echo CHtml::Button('Crear respuestas',array('submit'=>'../respuesta/redactar','params'=>array('id_evaluacion'=>$model->id_evaluacion,'id_tipo_pregunta'=>'1')));
+				}?>
+		</span>
+
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'redactar',
+	'enableAjaxValidation'=>false,
+	'htmlOptions'=>array(
+		'onsubmit'=>"return false;",/* Disable normal form submit */
+		),
+)); ?>
+
+
+
+
 	<p><h3>Cantidad minima de preguntas: <id="Cantidad_minima"><?php echo CHtml::encode($cant_minima);?></id></h3>
 	
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model);?>
+	
+	<div class="row" hidden>
+		<?php echo $form->textField($model,'id_evaluacion'); ?>
+	</div>
+
+	<div class="row" hidden>
+		<?php echo $form->textField($model,'id_tipo_pregunta'); ?>
+	</div>
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'clase_pregunta'); ?>
@@ -47,12 +64,6 @@
 	<div class="row buttons">
 		<span>
 		<?php echo CHtml::Button('Submit',array('onclick'=>'sendSubmit();')); ?>
-		</span>
-		<span id="Boton_siguiente" <?php if ($cant_minima>(count ($preguntas))){echo "hidden";}?>>
-		<?php 	if ($tipo<4){
-					$tipo++;
-					echo CHtml::Button('Siguiente tipo de Pregunta',array('onclick'=>'nextPage();'));
-				}?>
 		</span>
 	</div>
 	
@@ -73,7 +84,7 @@ function sendSubmit() {
   var num2="<?php echo $cant_minima?>";	
   $.ajax({
     type: 'POST',
-    url: '<?php echo Yii::app()->createAbsoluteUrl("pregunta/redactar",array('id'=>$model->id_evaluacion,'tipo'=>$model->id_tipo_pregunta)); ?>',
+    url: '<?php echo Yii::app()->createAbsoluteUrl("pregunta/redactar");?>',
     data:data,
     success:function(data){
 		var num=$(data).find('li').length;	
@@ -87,18 +98,12 @@ function sendSubmit() {
         });
     },
     error: function(data) { // if error occured
-      alert("Error occured.please try again");
+      alert("Error occured. Please try again");
     },
   });
 }
 
 function nextPage(){
-	if (<?php echo $tipo ?><4){ 
-		window.location="<?php echo ($model->id_evaluacion."?tipo=".$tipo);?>";
-		
-		
-	}else{
-		window.location="<?php echo Yii::app()->createAbsoluteUrl("respuesta/redactar",array('id'=>$model->id_evaluacion,'tipo'=>'1'));?>";
-	}
+	window.location="<?php echo Yii::app()->createAbsoluteUrl("respuesta/redactar",array('id'=>$model->id_evaluacion,'tipo'=>'1'));?>";
 }
 </script>

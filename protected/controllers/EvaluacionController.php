@@ -29,11 +29,11 @@ class EvaluacionController extends Controller
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'users'=>array('Docente','admin'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
-				'users'=>array('@'),
+				'users'=>array('Docente','admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
@@ -71,7 +71,9 @@ class EvaluacionController extends Controller
 		{
 			$model->attributes=$_POST['Evaluacion'];
 			if($model->save())
-				$this->redirect(array('/pregunta/redactar','id'=>$model->id_evaluacion,'tipo'=>'1'));
+				Yii::app()->session['id_evaluacion'] = $model->id_evaluacion;
+				Yii::app()->session['id_tipo_pregunta'] = '1';
+				$this->redirect(array('/pregunta/redactar'));
 		}
 
 		$this->render('create',array(

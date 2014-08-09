@@ -3,14 +3,16 @@
 /* @var $model Respuesta */
 /* @var $form CActiveForm */
 ?>
-
+<span id="Boton_siguiente">
+	<?php	if($tipo<3){ 
+				echo CHtml::Button('Siguiente tipo de preguntas',array('submit'=>'../respuesta/redactar','params'=>array('id_evaluacion'=>$idEvaluacion,'id_tipo_pregunta'=>$tipo+1))); 
+			}else{ 
+				echo CHtml::Button('Finalizar',array('onclick'=>'nextPage();'));
+			}?>
+</span>
 <div class="form">
-	<?php $id=Yii::app()->request->getQuery('id');?>
-	<?php $tipo=Yii::app()->request->getQuery('tipo');?>
-	<?php $preguntas=Pregunta::model()->findAll(array('condition'=>'id_evaluacion=:param AND id_tipo_pregunta=:param1','params'=>array('param'=>$id,'param1'=>$tipo)));?>
-	<span id="Boton_siguiente">
-		<?php 	echo CHtml::Button('Siguiente tipo de Pregunta',array('onclick'=>'nextPage();'));?>
-	</span>
+	<?php $preguntas=Pregunta::model()->findAll(array('condition'=>'id_evaluacion=:param AND id_tipo_pregunta=:param1','params'=>array('param'=>$idEvaluacion,'param1'=>$tipo)));?>
+	
 	<?php
 	foreach ($preguntas as $pregunta){
 		$model->id_pregunta=$pregunta->id_pregunta;
@@ -96,8 +98,12 @@
 	<?php } ?>
 <?php $this->endWidget();} ?>
 <span id="Boton_siguiente">
-		<?php 	echo CHtml::Button('Siguiente tipo de Pregunta',array('onclick'=>'nextPage();'));?>
-	</span>
+	<?php	if($tipo<3){ 
+				echo CHtml::Button('Siguiente tipo de preguntas',array('submit'=>'../respuesta/redactar','params'=>array('id_evaluacion'=>$idEvaluacion,'id_tipo_pregunta'=>$tipo+1))); 
+			}else{ 
+				echo CHtml::Button('Finalizar',array('onclick'=>'nextPage();'));
+			}?>
+</span>
 </div><!-- form -->
 
 
@@ -107,7 +113,7 @@ function sendSubmit(num,tipo) {
   var data=$("#redactar_"+num).serialize();
   $.ajax({
     type: 'POST',
-    url: '<?php echo Yii::app()->createAbsoluteUrl("respuesta/redactar",array('id'=>$id,'tipo'=>$tipo)); ?>',
+    url: '<?php echo Yii::app()->createAbsoluteUrl("respuesta/redactar"); ?>',
     data:data,
     success:function(data){
 		var li=$(data).find('li').length;
@@ -129,13 +135,7 @@ function sendSubmit(num,tipo) {
 }
 
 function nextPage(){
-	if (<?php echo $tipo ?><3){ 
-		<?php $tipo++;?>
-		window.location="<?php echo ($id."?tipo=".$tipo);?>";
-		
-		
-	}else{
-		window.location="<?php echo Yii::app()->createAbsoluteUrl("evaluacion/view",array('id'=>$id));?>";
-	}
+		window.location="<?php echo Yii::app()->createAbsoluteUrl("evaluacion/view",array('id'=>$idEvaluacion));?>";
+	
 }
 </script>

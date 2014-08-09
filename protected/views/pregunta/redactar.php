@@ -15,8 +15,8 @@ $this->menu=array(
 ?>
 <?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 <h1>Create Preguntas 
-	<?php $pregunta=TipoPregunta::model()->find(array('select'=>'nombre_tipo_pregunta','condition'=>'id_tipo_pregunta=:param1','params'=>array(':param1'=>$model->id_tipo_pregunta)));	
-	echo CHtml::encode($pregunta->nombre_tipo_pregunta);
+	<?php $pregunta=TipoPregunta::model()->findByPk($model->id_tipo_pregunta);	
+		echo CHtml::encode($pregunta->nombre_tipo_pregunta);
 	?></h1>
-<?php $evaluacion=Evaluacion::model()->find($model->id_evaluacion);?>
-<?php echo $this->renderPartial('_redactar', array('model'=>$model,'id'=>$model->id_evaluacion)); ?>
+
+<?php echo $this->renderPartial('_redactar', array('model'=>$model)); ?>

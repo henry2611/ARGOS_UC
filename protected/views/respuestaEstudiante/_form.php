@@ -233,7 +233,6 @@ function drop(ev)
 
 function nextPage(){
 		window.location="<?php echo Yii::app()->createAbsoluteUrl("estudianteevaluacion/view",array('id'=>$model->id_estudiante_evaluacion));?>";
-	
 }
 
 </script>
