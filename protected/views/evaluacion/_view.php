@@ -8,7 +8,7 @@
 	
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('clase')); $model=Clase::model()->find("id_clase=:param", array("param"=>$data->id_clase));?>:</b>
-	<?php echo CHtml::encode($model->nombre_clase); ?>
+	<?php echo CHtml::link(CHtml::encode($model->nombre_clase), array('view','id'=>$data->id_evaluacion)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('porcentaje')); ?>:</b>
@@ -22,12 +22,12 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('tiempo_final')); ?>:</b>
 	<?php echo CHtml::encode($data->tiempo_final); ?>
 	<br />
-
+<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('numero_max_tips')); ?>:</b>
 	<?php echo CHtml::encode($data->numero_max_tips); ?>
 	<br />
 
-	<?php /*
+	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('cant_dificil')); ?>:</b>
 	<?php echo CHtml::encode($data->cant_dificil); ?>
 	<br />

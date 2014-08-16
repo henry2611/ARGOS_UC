@@ -26,7 +26,9 @@ class Curso extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-
+	
+	public $nombreClase;
+	public $idClase;
 	/**
 	 * @return string the associated database table name
 	 */

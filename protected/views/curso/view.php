@@ -29,3 +29,7 @@ $this->menu=array(
 		'numero_estudiantes',
 	),
 )); ?>
+
+<div class="row buttons">
+		<?php echo CHtml::Button('Evaluaciones',array('submit'=>'../evaluacion/','params'=>array('id_curso'=>$model->id_curso))); ?>
+</div>

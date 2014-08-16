@@ -18,6 +18,7 @@ class EvaluacionController extends Controller
 			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
+	
 
 	/**
 	 * Specifies the access control rules.
@@ -28,12 +29,12 @@ class EvaluacionController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('Docente','admin'),
+				'actions'=>array('index','view','notas'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('Docente','admin'),
+				'actions'=>array('create','update','loadcursos'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
@@ -124,10 +125,39 @@ class EvaluacionController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Evaluacion');
+		$id = Yii::app()->user->id;
+		$user = Yii::app()->db->createCommand()->select('username')->from('cruge_user')
+                ->where('iduser='.$id)->queryScalar();
+		$criteria = new CDbCriteria;
+		$criteria -> select = array('z.username_docente','t.id_clase','t.id_evaluacion','t.porcentaje','t.tiempo_inicio','t.tiempo_final');
+		$criteria -> join = 'LEFT JOIN Clase x ON x.id_clase=t.id_clase ';
+		$criteria -> join .='LEFT JOIN Tema y ON y.id_tema=x.id_tema ';
+		$criteria -> join .='LEFT JOIN Curso z ON z.id_curso=y.id_curso ';
+		if(isset($_POST['id_curso'])){
+			$criteria -> condition = 'z.id_curso='."'".$_POST['id_curso']."'".' AND z.username_docente='."'".$user."'";
+		}else{
+			$criteria -> condition = 'z.username_docente='."'".$user."'";
+		}
+		$dataProvider=new CActiveDataProvider('Evaluacion',array('criteria'=>$criteria));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
+	}
+	
+	public function actionNotas()
+	{
+		if(isset($_POST['id_evaluacion'])){
+			$idEvaluacion=$_POST['id_evaluacion'];
+			$criteria = new CDbCriteria;
+			$criteria -> select = array('y.username_estudiante AS usernameEstudiante','t.calificacion', 't.id_evaluacion');
+			//$criteria -> join = 'LEFT JOIN Estudiante_Evaluacion x ON x.id_evaluacion=t.id_evaluacion ';
+			$criteria -> join = 'LEFT JOIN Curso_Estudiantes y ON y.id_curso_estudiante=t.id_curso_estudiante ';
+			$criteria -> condition = 't.id_evaluacion='."'".$idEvaluacion."'";
+			$model=EstudianteEvaluacion::model()->findAll($criteria);  
+			$this->render('notas',array(
+			'model'=>$model,
+			));
+		}
 	}
 
 	/**
@@ -158,6 +188,33 @@ class EvaluacionController extends Controller
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
+	}
+	
+	public function actionLoadcursos()
+	{
+		$curso = isset($_POST['id_curso']) ? $_POST['id_curso'] : '';
+		$criteria= new CDbCriteria();
+		$criteria->select='clase.id_clase AS idClase , clase.nombre_clase AS nombreClase';
+		//$criteria->join ='LEFT JOIN curso ON curso.id_curso=t.id_curso ';
+		$criteria->join ='LEFT JOIN tema ON tema.id_curso=t.id_curso ';
+		$criteria->join .='LEFT JOIN clase ON clase.id_tema=tema.id_tema ';
+		$criteria->condition= 't.id_curso=:value';
+		$criteria->params = array(":value"=>$curso);
+		
+		$test=Curso::model()->findAll($criteria);
+		
+				
+		if (is_array($test) ){
+			foreach($test as $value=>$name){
+					echo CHtml::tag('option',
+						array('value'=>''.$name['idClase']),CHtml::encode($name['nombreClase']),true);
+            }
+        } 
+        else{
+            echo CHtml::tag('option',
+                    array('value'=>''.'0'),CHtml::encode('No se encontro temas'),true);
+        }
+		
 	}
 
 	/**

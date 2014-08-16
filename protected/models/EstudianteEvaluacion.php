@@ -22,6 +22,8 @@ class EstudianteEvaluacion extends CActiveRecord
 	 * @return EstudianteEvaluacion the static model class
 	 */
 	public $prueba;
+	public $usernameEstudiante;
+	public $calificacion;
 	
 	
 	public static function model($className=__CLASS__)

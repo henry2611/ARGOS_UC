@@ -35,3 +35,7 @@ $this->menu=array(
 		'puntuacion_facil',
 	),
 )); ?>
+
+<div class="row buttons">
+		<?php echo CHtml::Button('Ver Notas',array('submit'=>'../evaluacion/notas','params'=>array('id_evaluacion'=>$model->id_evaluacion))); ?>
+</div>

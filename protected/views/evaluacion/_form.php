@@ -13,7 +13,31 @@
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php echo $form->errorSummary($model); 
+		$test=new Curso;
+		$id = Yii::app()->user->id;
+		$user = Yii::app()->db->createCommand()->select('username')->from('cruge_user')
+                ->where('iduser='.$id)->queryScalar();
+		$criteria = Yii::app()->db->createCommand()
+		-> select ('t.id_curso, t.username_docente, t.nombre_curso')
+		-> from ('Curso t')
+		-> where ('t.username_docente='."'".$user."'")
+		->queryAll();
+	
+	?>
+	
+	<div class="row">
+		<?php echo $form->labelEx($test,'curso'); ?>
+		<?php echo $form->dropDownList($test,'id_curso',CHTML::listData($criteria,'id_curso','nombre_curso'),array(
+			'prompt' => 'Seleccione un curso',
+			'ajax' => array(
+				'type' => 'POST',
+				'url' => Yii::app()->createUrl('Evaluacion/loadcursos'),
+				'update' => '#Evaluacion_id_clase',
+				'data' => array('id_curso'=>'js:this.value'),
+				))); ?>
+		<?php echo $form->error($test,'id_curso'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'clase'); ?>
