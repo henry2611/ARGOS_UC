@@ -3,16 +3,16 @@
 /* @var $model Evaluacion */
 
 $this->breadcrumbs=array(
-	'Evaluacions'=>array('index'),
+	'Evaluaciones'=>array('index'),
 	$model->id_evaluacion=>array('view','id'=>$model->id_evaluacion),
 	'Update',
 );
 
 $this->menu=array(
-	array('label'=>'List Evaluacion', 'url'=>array('index')),
-	array('label'=>'Create Evaluacion', 'url'=>array('create')),
-	array('label'=>'View Evaluacion', 'url'=>array('view', 'id'=>$model->id_evaluacion)),
-	array('label'=>'Manage Evaluacion', 'url'=>array('admin')),
+	array('label'=>'Lista Evaluaciones', 'url'=>array('index')),
+	array('label'=>'Crear Evaluacion', 'url'=>array('create')),
+	array('label'=>'Ver Evaluacion', 'url'=>array('view', 'id'=>$model->id_evaluacion)),
+	array('label'=>'Administrar Evaluaciones', 'url'=>array('admin')),
 );
 ?>
 

@@ -3,20 +3,20 @@
 /* @var $model EstudianteEvaluacion */
 
 $this->breadcrumbs=array(
-	'Estudiante Evaluacions'=>array('index'),
+	'Evaluacion Estudiante'=>array('index'),
 	$model->id_evaluacion_estudiante,
 );
 
 $this->menu=array(
-	array('label'=>'List EstudianteEvaluacion', 'url'=>array('index')),
-	array('label'=>'Create EstudianteEvaluacion', 'url'=>array('create')),
-	array('label'=>'Update EstudianteEvaluacion', 'url'=>array('update', 'id'=>$model->id_evaluacion_estudiante)),
-	array('label'=>'Delete EstudianteEvaluacion', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_evaluacion_estudiante),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage EstudianteEvaluacion', 'url'=>array('admin')),
+	array('label'=>'Lista Evaluaciones Estudiante', 'url'=>array('index')),
+	array('label'=>'Crear Evaluacion Estudiante', 'url'=>array('create')),
+	//array('label'=>'Update EstudianteEvaluacion', 'url'=>array('update', 'id'=>$model->id_evaluacion_estudiante)),
+	//array('label'=>'Delete EstudianteEvaluacion', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_evaluacion_estudiante),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Administrar Evaluaciones Estudiante', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View EstudianteEvaluacion #<?php echo $model->id_evaluacion_estudiante; ?></h1>
+<h1>Ver Evaluacion Estudiante #<?php echo $model->id_evaluacion_estudiante; ?></h1>
 
 
 

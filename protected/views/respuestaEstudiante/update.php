@@ -9,13 +9,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List RespuestaEstudiante', 'url'=>array('index')),
-	array('label'=>'Create RespuestaEstudiante', 'url'=>array('create')),
-	array('label'=>'View RespuestaEstudiante', 'url'=>array('view', 'id'=>$model->id_respuesta_estudiante)),
+	//array('label'=>'Lista Respuestas Estudiante', 'url'=>array('index')),
+	//array('label'=>'Create RespuestaEstudiante', 'url'=>array('create')),
+	//array('label'=>'View RespuestaEstudiante', 'url'=>array('view', 'id'=>$model->id_respuesta_estudiante)),
 	array('label'=>'Manage RespuestaEstudiante', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update RespuestaEstudiante <?php echo $model->id_respuesta_estudiante; ?></h1>
+<h1>Actualizar Respuesta Estudiante <?php echo $model->id_respuesta_estudiante; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

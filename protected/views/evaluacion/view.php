@@ -3,20 +3,20 @@
 /* @var $model Evaluacion */
 
 $this->breadcrumbs=array(
-	'Evaluacions'=>array('index'),
+	'Evaluaciones'=>array('index'),
 	$model->id_evaluacion,
 );
 
 $this->menu=array(
-	array('label'=>'List Evaluacion', 'url'=>array('index')),
-	array('label'=>'Create Evaluacion', 'url'=>array('create')),
-	array('label'=>'Update Evaluacion', 'url'=>array('update', 'id'=>$model->id_evaluacion)),
-	array('label'=>'Delete Evaluacion', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_evaluacion),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Evaluacion', 'url'=>array('admin')),
+	array('label'=>'Lista Evaluaciones', 'url'=>array('index')),
+	array('label'=>'Crear Evaluacion', 'url'=>array('create')),
+	//array('label'=>'Update Evaluacion', 'url'=>array('update', 'id'=>$model->id_evaluacion)),
+	//array('label'=>'Delete Evaluacion', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_evaluacion),'confirm'=>'Are you sure you want to delete this item?')),
+	//array('label'=>'Manage Evaluacion', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Evaluacion #<?php echo $model->id_evaluacion; ?></h1>
+<h1>Ver Evaluacion #<?php echo $model->id_evaluacion; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

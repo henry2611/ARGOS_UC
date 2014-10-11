@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Pregunta', 'url'=>array('create')),
-	array('label'=>'Manage Pregunta', 'url'=>array('admin')),
+	array('label'=>'Crear Preguntas', 'url'=>array('create')),
+	array('label'=>'Administar Preguntas', 'url'=>array('admin')),
 );
 ?>
 

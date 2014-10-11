@@ -13,10 +13,11 @@ class TipoRespuestaController extends Controller
 	 */
 	public function filters()
 	{
-		return array(
+		/*return array(
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
-		);
+		);*/
+		return array(array('CrugeAccessControlFilter'));
 	}
 
 	/**

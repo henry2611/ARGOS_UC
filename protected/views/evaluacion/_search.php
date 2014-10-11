@@ -28,7 +28,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'tiempo_inicio'); ?>
-		<?php echo $form->textField($model,'tiempo_incio'); ?>
+		<?php echo $form->textField($model,'tiempo_inicio'); ?>
 	</div>
 	
 	<div class="row">

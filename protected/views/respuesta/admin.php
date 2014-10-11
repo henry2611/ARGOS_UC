@@ -4,12 +4,12 @@
 
 $this->breadcrumbs=array(
 	'Respuestas'=>array('index'),
-	'Manage',
+	'Administrar',
 );
 
 $this->menu=array(
-	array('label'=>'List Respuesta', 'url'=>array('index')),
-	array('label'=>'Create Respuesta', 'url'=>array('create')),
+	array('label'=>'Lista Respuestas', 'url'=>array('index')),
+	array('label'=>'Crear Respuesta', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

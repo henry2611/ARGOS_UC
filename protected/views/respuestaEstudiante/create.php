@@ -13,5 +13,5 @@ $this->menu=array(
 ?>
 <?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 
-<h1>Create RespuestaEstudiante</h1>
+<h1>Respuestas de la Evaluacion</h1>
 <?php echo $this->renderPartial('_form', array('model'=>$model,'tipo_pregunta'=>$tipo_pregunta)); ?>

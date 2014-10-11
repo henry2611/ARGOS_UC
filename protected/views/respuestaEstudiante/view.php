@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List RespuestaEstudiante', 'url'=>array('index')),
-	array('label'=>'Create RespuestaEstudiante', 'url'=>array('create')),
-	array('label'=>'Update RespuestaEstudiante', 'url'=>array('update', 'id'=>$model->id_respuesta_estudiante)),
-	array('label'=>'Delete RespuestaEstudiante', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_respuesta_estudiante),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage RespuestaEstudiante', 'url'=>array('admin')),
+	array('label'=>'Lista Respuestas Estudiante', 'url'=>array('index')),
+	array('label'=>'Crear Respuestas Estudiante', 'url'=>array('create')),
+	//array('label'=>'Update RespuestaEstudiante', 'url'=>array('update', 'id'=>$model->id_respuesta_estudiante)),
+	//array('label'=>'Delete RespuestaEstudiante', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_respuesta_estudiante),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Administrar Respuestas Estudiante', 'url'=>array('admin')),
 );
 ?>
 

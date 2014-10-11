@@ -3,16 +3,16 @@
 /* @var $model EstudianteEvaluacion */
 
 $this->breadcrumbs=array(
-	'Estudiante Evaluacions'=>array('index'),
-	'Create',
+	'Evaluaciones Estudiante'=>array('index'),
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List Estudiante Evaluacion', 'url'=>array('index')),
-	array('label'=>'Manage Estudiante Evaluacion', 'url'=>array('admin')),
+	array('label'=>'Lista Evaluaciones Estudiante', 'url'=>array('index')),
+	//array('label'=>'Manage Estudiante Evaluacion', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Estudiante Evaluacion</h1>
+<h1>Crear Evaluacion Estudiante</h1>
 
 <?php echo $this->renderPartial('_create', array('model'=>$model)); ?>

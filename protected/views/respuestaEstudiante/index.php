@@ -7,12 +7,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create RespuestaEstudiante', 'url'=>array('create')),
-	array('label'=>'Manage RespuestaEstudiante', 'url'=>array('admin')),
+	array('label'=>'Crear Respuesta Evaluacion', 'url'=>array('create')),
+	array('label'=>'Administrar Respuestas Evaluacion', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Respuesta Estudiantes</h1>
+<h1>Respuesta Evaluacion</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

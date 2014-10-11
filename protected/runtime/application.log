@@ -597,3 +597,394 @@ Stack trace:
 REQUEST_URI=/argos_yii/Evaluacion/loadcursos
 HTTP_REFERER=http://localhost/argos_yii/evaluacion/create
 ---
+2014/09/10 23:33:55 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\argos_yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\argos_yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\argos_yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\argos_yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('clase/view')
+#10 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\argos_yii\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/argos_yii/clase/view
+HTTP_REFERER=http://localhost/argos_yii/clase/1
+---
+2014/09/10 23:34:02 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\argos_yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\argos_yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\argos_yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\argos_yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('clase/view')
+#10 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\argos_yii\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/argos_yii/clase/view
+HTTP_REFERER=http://localhost/argos_yii/clase/1
+---
+2014/09/12 03:22:49 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\xampp\htdocs\argos_yii\protected\modules\cruge\controllers\UiController.php (158)
+in C:\xampp\htdocs\argos_yii\index.php (13)
+2014/09/13 00:28:27 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'id_curso'. La sentencia SQL ejecutada fue: INSERT INTO `curso_estudiantes` (`id_curso`, `username_estudiante`) VALUES (:yp0, :yp1).
+in C:\xampp\htdocs\argos_yii\protected\controllers\CursoEstudiantesController.php (73)
+in C:\xampp\htdocs\argos_yii\index.php (13)
+2014/09/13 00:28:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'id_curso'. The SQL statement executed was: INSERT INTO `curso_estudiantes` (`id_curso`, `username_estudiante`) VALUES (:yp0, :yp1)' in C:\xampp\htdocs\argos_yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\xampp\htdocs\argos_yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\argos_yii\protected\controllers\CursoEstudiantesController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\argos_yii\framework\web\actions\CInlineAction.php(49): CursoEstudiantesController->actionCreate()
+#4 C:\xampp\htdocs\argos_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\argos_yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\argos_yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\argos_yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('cursoEstudiante...')
+#14 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\argos_yii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/argos_yii/cursoEstudiantes/create
+HTTP_REFERER=http://localhost/argos_yii/cursoEstudiantes/create
+---
+2014/09/13 00:29:29 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'id_curso'. La sentencia SQL ejecutada fue: INSERT INTO `curso_estudiantes` (`id_curso`, `username_estudiante`) VALUES (:yp0, :yp1).
+in C:\xampp\htdocs\argos_yii\protected\controllers\CursoEstudiantesController.php (73)
+in C:\xampp\htdocs\argos_yii\index.php (13)
+2014/09/13 00:29:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'id_curso'. The SQL statement executed was: INSERT INTO `curso_estudiantes` (`id_curso`, `username_estudiante`) VALUES (:yp0, :yp1)' in C:\xampp\htdocs\argos_yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\xampp\htdocs\argos_yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\argos_yii\protected\controllers\CursoEstudiantesController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\argos_yii\framework\web\actions\CInlineAction.php(49): CursoEstudiantesController->actionCreate()
+#4 C:\xampp\htdocs\argos_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\argos_yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\argos_yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\argos_yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('cursoEstudiante...')
+#14 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\argos_yii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/argos_yii/cursoEstudiantes/create
+HTTP_REFERER=http://localhost/argos_yii/cursoEstudiantes/create
+---
+2014/09/13 04:25:46 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\xampp\htdocs\argos_yii\protected\modules\cruge\controllers\UiController.php (158)
+in C:\xampp\htdocs\argos_yii\index.php (13)
+2014/09/13 23:28:18 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\xampp\htdocs\argos_yii\protected\modules\cruge\controllers\UiController.php (158)
+in C:\xampp\htdocs\argos_yii\index.php (13)
+2014/09/30 16:25:42 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\xampp\htdocs\argos_yii\protected\modules\cruge\controllers\UiController.php (158)
+in C:\xampp\htdocs\argos_yii\index.php (13)
+2014/09/30 16:26:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "inde" solicitada.' in C:\xampp\htdocs\argos_yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\web\CController.php(270): CController->missingAction('inde')
+#1 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): CController->run('inde')
+#2 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evaluacion/inde')
+#3 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\argos_yii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/argos_yii/evaluacion/inde
+---
+2014/09/30 16:26:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\argos_yii\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\argos_yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\argos_yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\argos_yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evaluacion/admi...')
+#9 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\argos_yii\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/argos_yii/evaluacion/admin
+HTTP_REFERER=http://localhost/argos_yii/evaluacion/index
+---
+2014/10/11 06:16:42 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\argos_yii\protected\views\respuestaEstudiante\_form.php:12)
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\web\CController.php(869): RespuestaEstudianteController->renderFile()
+#1 C:\xampp\htdocs\argos_yii\protected\views\respuestaEstudiante\create.php(17): RespuestaEstudianteController->renderPartial()
+#2 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): RespuestaEstudianteController->renderInternal()
+#4 C:\xampp\htdocs\argos_yii\framework\web\CController.php(869): RespuestaEstudianteController->renderFile()
+#5 C:\xampp\htdocs\argos_yii\framework\web\CController.php(782): RespuestaEstudianteController->renderPartial()
+#6 C:\xampp\htdocs\argos_yii\protected\controllers\RespuestaEstudianteController.php(154): RespuestaEstudianteController->render()
+#7 C:\xampp\htdocs\argos_yii\framework\web\actions\CInlineAction.php(49): RespuestaEstudianteController->actionCreate()
+#8 C:\xampp\htdocs\argos_yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(133): RespuestaEstudianteController->runAction()
+#10 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\argos_yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\argos_yii\framework\web\filters\CInlineFilter.php(58): RespuestaEstudianteController->filterAccessControl()
+#13 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\htdocs\argos_yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): RespuestaEstudianteController->runActionWithFilters()
+#16 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): RespuestaEstudianteController->run()
+#17 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\argos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/argos_yii/respuestaestudiante/create
+in C:\xampp\htdocs\argos_yii\protected\views\respuestaEstudiante\_form.php (12)
+in C:\xampp\htdocs\argos_yii\protected\views\respuestaEstudiante\create.php (17)
+in C:\xampp\htdocs\argos_yii\protected\controllers\RespuestaEstudianteController.php (154)
+2014/10/11 06:17:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\argos_yii\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\argos_yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\argos_yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\argos_yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): CController->run('examen')
+#8 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('respuestaestudi...')
+#9 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\argos_yii\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/argos_yii/respuestaestudiante/examen
+---
+2014/10/11 06:17:23 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\argos_yii\protected\views\respuestaEstudiante\_form.php:12)
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\web\CController.php(869): RespuestaEstudianteController->renderFile()
+#1 C:\xampp\htdocs\argos_yii\protected\views\respuestaEstudiante\create.php(17): RespuestaEstudianteController->renderPartial()
+#2 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): RespuestaEstudianteController->renderInternal()
+#4 C:\xampp\htdocs\argos_yii\framework\web\CController.php(869): RespuestaEstudianteController->renderFile()
+#5 C:\xampp\htdocs\argos_yii\framework\web\CController.php(782): RespuestaEstudianteController->renderPartial()
+#6 C:\xampp\htdocs\argos_yii\protected\controllers\RespuestaEstudianteController.php(154): RespuestaEstudianteController->render()
+#7 C:\xampp\htdocs\argos_yii\framework\web\actions\CInlineAction.php(49): RespuestaEstudianteController->actionCreate()
+#8 C:\xampp\htdocs\argos_yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(133): RespuestaEstudianteController->runAction()
+#10 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\argos_yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\argos_yii\framework\web\filters\CInlineFilter.php(58): RespuestaEstudianteController->filterAccessControl()
+#13 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\htdocs\argos_yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): RespuestaEstudianteController->runActionWithFilters()
+#16 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): RespuestaEstudianteController->run()
+#17 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\argos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/argos_yii/respuestaestudiante/create
+in C:\xampp\htdocs\argos_yii\protected\views\respuestaEstudiante\_form.php (12)
+in C:\xampp\htdocs\argos_yii\protected\views\respuestaEstudiante\create.php (17)
+in C:\xampp\htdocs\argos_yii\protected\controllers\RespuestaEstudianteController.php (154)
+2014/10/11 06:23:10 [error] [exception.CrugeException.401] action_estudianteevaluacion_index<br/>401
+REQUEST_URI=/argos_yii/estudianteevaluacion
+---
+2014/10/11 06:26:10 [error] [exception.CrugeException.401] action_estudianteevaluacion_index<br/>401
+REQUEST_URI=/argos_yii/estudianteevaluacion
+---
+2014/10/11 06:27:40 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>El código de verificación es incorrecto.</li>
+</ul></div>
+in C:\xampp\htdocs\argos_yii\protected\modules\cruge\controllers\UiController.php (158)
+in C:\xampp\htdocs\argos_yii\index.php (13)
+2014/10/11 06:28:23 [error] [exception.CException] exception 'CException' with message 'Propiedad "Evaluacion"."tiempo_incio" no se encuentra definida.' in C:\xampp\htdocs\argos_yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('tiempo_incio')
+#1 C:\xampp\htdocs\argos_yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('tiempo_incio')
+#2 C:\xampp\htdocs\argos_yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Evaluacion), 'tiempo_incio')
+#3 C:\xampp\htdocs\argos_yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Evaluacion), 'tiempo_incio', Array)
+#4 C:\xampp\htdocs\argos_yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(Evaluacion), 'tiempo_incio', Array)
+#5 C:\xampp\htdocs\argos_yii\protected\views\evaluacion\_search.php(31): CActiveForm->textField(Object(Evaluacion), 'tiempo_incio')
+#6 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\argos_yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\argos_yii\protected\views\evaluacion\admin.php(40): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\argos_yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\argos_yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\argos_yii\protected\controllers\EvaluacionController.php(176): CController->render('admin', Array)
+#15 C:\xampp\htdocs\argos_yii\framework\web\actions\CInlineAction.php(49): EvaluacionController->actionAdmin()
+#16 C:\xampp\htdocs\argos_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\argos_yii\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#19 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#20 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\argos_yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#24 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evaluacion/admi...')
+#25 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\argos_yii\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/argos_yii/evaluacion/admin
+HTTP_REFERER=http://localhost/argos_yii/evaluacion/create
+---
+2014/10/11 06:28:32 [error] [exception.CException] exception 'CException' with message 'Propiedad "Evaluacion"."tiempo_incio" no se encuentra definida.' in C:\xampp\htdocs\argos_yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('tiempo_incio')
+#1 C:\xampp\htdocs\argos_yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('tiempo_incio')
+#2 C:\xampp\htdocs\argos_yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Evaluacion), 'tiempo_incio')
+#3 C:\xampp\htdocs\argos_yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Evaluacion), 'tiempo_incio', Array)
+#4 C:\xampp\htdocs\argos_yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(Evaluacion), 'tiempo_incio', Array)
+#5 C:\xampp\htdocs\argos_yii\protected\views\evaluacion\_search.php(31): CActiveForm->textField(Object(Evaluacion), 'tiempo_incio')
+#6 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\argos_yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\argos_yii\protected\views\evaluacion\admin.php(40): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\argos_yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\argos_yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\argos_yii\protected\controllers\EvaluacionController.php(176): CController->render('admin', Array)
+#15 C:\xampp\htdocs\argos_yii\framework\web\actions\CInlineAction.php(49): EvaluacionController->actionAdmin()
+#16 C:\xampp\htdocs\argos_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\argos_yii\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#19 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#20 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\argos_yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#24 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evaluacion/admi...')
+#25 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\argos_yii\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/argos_yii/evaluacion/admin
+HTTP_REFERER=http://localhost/argos_yii/evaluacion/create
+---
+2014/10/11 06:28:33 [error] [exception.CException] exception 'CException' with message 'Propiedad "Evaluacion"."tiempo_incio" no se encuentra definida.' in C:\xampp\htdocs\argos_yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('tiempo_incio')
+#1 C:\xampp\htdocs\argos_yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('tiempo_incio')
+#2 C:\xampp\htdocs\argos_yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Evaluacion), 'tiempo_incio')
+#3 C:\xampp\htdocs\argos_yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Evaluacion), 'tiempo_incio', Array)
+#4 C:\xampp\htdocs\argos_yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(Evaluacion), 'tiempo_incio', Array)
+#5 C:\xampp\htdocs\argos_yii\protected\views\evaluacion\_search.php(31): CActiveForm->textField(Object(Evaluacion), 'tiempo_incio')
+#6 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\argos_yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\argos_yii\protected\views\evaluacion\admin.php(40): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\argos_yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\argos_yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\argos_yii\protected\controllers\EvaluacionController.php(176): CController->render('admin', Array)
+#15 C:\xampp\htdocs\argos_yii\framework\web\actions\CInlineAction.php(49): EvaluacionController->actionAdmin()
+#16 C:\xampp\htdocs\argos_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\argos_yii\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#19 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#20 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\argos_yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#24 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evaluacion/admi...')
+#25 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\argos_yii\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/argos_yii/evaluacion/admin
+HTTP_REFERER=http://localhost/argos_yii/evaluacion/create
+---
+2014/10/11 06:28:37 [error] [exception.CException] exception 'CException' with message 'Propiedad "Evaluacion"."tiempo_incio" no se encuentra definida.' in C:\xampp\htdocs\argos_yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('tiempo_incio')
+#1 C:\xampp\htdocs\argos_yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('tiempo_incio')
+#2 C:\xampp\htdocs\argos_yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Evaluacion), 'tiempo_incio')
+#3 C:\xampp\htdocs\argos_yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Evaluacion), 'tiempo_incio', Array)
+#4 C:\xampp\htdocs\argos_yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(Evaluacion), 'tiempo_incio', Array)
+#5 C:\xampp\htdocs\argos_yii\protected\views\evaluacion\_search.php(31): CActiveForm->textField(Object(Evaluacion), 'tiempo_incio')
+#6 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\argos_yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\argos_yii\protected\views\evaluacion\admin.php(40): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\argos_yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\argos_yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\argos_yii\protected\controllers\EvaluacionController.php(176): CController->render('admin', Array)
+#15 C:\xampp\htdocs\argos_yii\framework\web\actions\CInlineAction.php(49): EvaluacionController->actionAdmin()
+#16 C:\xampp\htdocs\argos_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\argos_yii\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#19 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#20 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\argos_yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#24 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evaluacion/admi...')
+#25 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\argos_yii\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/argos_yii/evaluacion/admin
+---
+2014/10/11 06:31:41 [error] [exception.CException] exception 'CException' with message 'Propiedad "Evaluacion"."tiempo_incio" no se encuentra definida.' in C:\xampp\htdocs\argos_yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\argos_yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('tiempo_incio')
+#1 C:\xampp\htdocs\argos_yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('tiempo_incio')
+#2 C:\xampp\htdocs\argos_yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Evaluacion), 'tiempo_incio')
+#3 C:\xampp\htdocs\argos_yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Evaluacion), 'tiempo_incio', Array)
+#4 C:\xampp\htdocs\argos_yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(Evaluacion), 'tiempo_incio', Array)
+#5 C:\xampp\htdocs\argos_yii\protected\views\evaluacion\_search.php(31): CActiveForm->textField(Object(Evaluacion), 'tiempo_incio')
+#6 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\argos_yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\argos_yii\protected\views\evaluacion\admin.php(40): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\argos_yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\argos_yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\argos_yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\argos_yii\protected\controllers\EvaluacionController.php(176): CController->render('admin', Array)
+#15 C:\xampp\htdocs\argos_yii\framework\web\actions\CInlineAction.php(49): EvaluacionController->actionAdmin()
+#16 C:\xampp\htdocs\argos_yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\argos_yii\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#19 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#20 C:\xampp\htdocs\argos_yii\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\argos_yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\argos_yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#24 C:\xampp\htdocs\argos_yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evaluacion/admi...')
+#25 C:\xampp\htdocs\argos_yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\argos_yii\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/argos_yii/evaluacion/admin
+HTTP_REFERER=http://localhost/argos_yii/evaluacion/create
+---

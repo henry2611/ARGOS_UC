@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Respuesta', 'url'=>array('create')),
-	array('label'=>'Manage Respuesta', 'url'=>array('admin')),
+	array('label'=>'Crear Respuesta', 'url'=>array('create')),
+	array('label'=>'Administrar Respuesta', 'url'=>array('admin')),
 );
 ?>
 

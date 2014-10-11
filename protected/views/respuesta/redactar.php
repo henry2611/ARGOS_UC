@@ -4,12 +4,12 @@
 
 $this->breadcrumbs=array(
 	'Respuestas'=>array('index'),
-	'Create',
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List Respuesta', 'url'=>array('index')),
-	array('label'=>'Manage Respuesta', 'url'=>array('admin')),
+	array('label'=>'Lista Respuestas', 'url'=>array('index')),
+	array('label'=>'Administrar Respuesta', 'url'=>array('admin')),
 );
 
 ?>

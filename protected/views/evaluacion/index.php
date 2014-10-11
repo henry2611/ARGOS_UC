@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Evaluacion', 'url'=>array('create')),
-	array('label'=>'Manage Evaluacion', 'url'=>array('admin')),
+	array('label'=>'Crear Evaluacion', 'url'=>array('create')),
+	array('label'=>'Administrar Evaluaciones', 'url'=>array('admin')),
 );
 ?>
 

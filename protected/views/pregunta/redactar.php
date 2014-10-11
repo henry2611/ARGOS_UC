@@ -9,8 +9,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Pregunta', 'url'=>array('index')),
-	array('label'=>'Manage Pregunta', 'url'=>array('admin')),
+	array('label'=>'Lista Preguntas', 'url'=>array('index')),
+	array('label'=>'Administrar Preguntas', 'url'=>array('admin')),
 );
 ?>
 <?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
