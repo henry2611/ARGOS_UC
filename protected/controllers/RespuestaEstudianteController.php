@@ -150,6 +150,11 @@ class RespuestaEstudianteController extends Controller
 		else{
 			$model->id_estudiante_evaluacion=isset($_POST['id_estudiante_evaluacion']) ? $_POST['id_estudiante_evaluacion'] : '';
 			$tipoPregunta=isset($_POST['tipo_pregunta']) ? $_POST['tipo_pregunta'] : '';
+			$estudianteevaluacion=EstudianteEvaluacion::model()->findByPk($model->id_estudiante_evaluacion);
+			if ($estudianteevaluacion->calificacion==null){
+				$estudianteevaluacion->calificacion=0;
+				$estudianteevaluacion->save();
+			}
 			$this->render('create',array(
 				'model'=>$model,'tipo_pregunta'=>$tipoPregunta,
 			));

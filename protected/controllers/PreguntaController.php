@@ -116,6 +116,7 @@ class PreguntaController extends Controller
 				$preguntas=Pregunta::model()->findAll(array('condition'=>'id_evaluacion=:param AND id_tipo_pregunta=:param1','params'=>array('param'=>$model->id_evaluacion,'param1'=>$model->id_tipo_pregunta)));
 				echo "<h3>";
 				foreach ($preguntas as $record) {
+					setcookie("Pregunta_".$record->id_pregunta,0,time()+3600);
 					echo "<li>".$record->texto_pregunta."</li>"; 
 				}
 				echo "</h3>"; 

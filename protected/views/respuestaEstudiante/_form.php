@@ -99,12 +99,12 @@
 	?></div>
 	<div class="row" >
 		<span style="float:left;width:50%;">
-		<?php echo $form->labelEx($model,'texto_respuesta'); ?>
-		<div id="texto_respuesta" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>	
+		<?php echo $form->labelEx($model,'pregunta');?>
+		<div id="texto_respuesta_b" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>	
 		</span>
 		<span style="float:right;width:50%;">
-		<?php echo $form->labelEx($model,'texto_respuesta'); ?>
-		<div id="texto_respuesta_b" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+		<?php echo $form->labelEx($model,'respuesta');?>
+		<div id="texto_respuesta" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
 		</span>
 	</div>
 	<br>
@@ -154,9 +154,11 @@ function sendSubmit(num) {
 
 function sendSubmitPareo(num) {
   var data=$("#respuesta-estudiante_"+num).serialize();
-  var text="RespuestaEstudiante%5Btexto_respuesta%5D="+document.getElementById("texto_respuesta").textContent;
   var text2="RespuestaEstudiante%5Btexto_respuesta_b%5D="+document.getElementById("texto_respuesta_b").textContent;
-  if($('#texto_respuesta_b:empty').length){
+  var text="RespuestaEstudiante%5Btexto_respuesta%5D="+document.getElementById("texto_respuesta").textContent;
+  var element1 = document.getElementById("texto_respuesta_b").textContent;
+  console.log(element1);
+  if(element1==null || element1==''){
 	data2=data+"&"+text.trim();
   }else{
 	data2=(data+"&"+text.trim()+"&"+text2.trim());
@@ -166,8 +168,8 @@ function sendSubmitPareo(num) {
 	url: '<?php echo Yii::app()->createAbsoluteUrl("respuestaestudiante/create"); ?>',
 	data:data2,
 	success:function(data){
-		$("#texto_respuesta").html("");
 		$("#texto_respuesta_b").html("");
+		$("#texto_respuesta").html("");
 		
 	  //$('#Boton_respuesta_'+num).fadeOut(800);
 	},

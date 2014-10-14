@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Crear Evaluacion Estudiante</h1>
+<h1>Presentar Evaluacion</h1>
 
 <?php echo $this->renderPartial('_create', array('model'=>$model)); ?>

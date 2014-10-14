@@ -90,15 +90,24 @@ class RespuestaController extends Controller
 		if(isset($_POST['Respuesta']))
 		{
 			$model->attributes=$_POST['Respuesta'];
+			$foo=$model->texto_respuesta_b;
+			trim($foo);
+			if(strlen($foo)==0){
+				$foo=null;
+			}
+			$model->texto_respuesta_b=$foo;
 			if($model->save()){
 				$respuestas=Respuesta::model()->findAll(array('condition'=>'id_pregunta=:param','params'=>array('param'=>$model->id_pregunta)));
 				$preg=Pregunta::model()->findByPk($model->id_pregunta);
+				if(($preg->id_clase_pregunta==1)||($preg->id_clase_pregunta)){
+					setcookie("Pregunta_".$preg->id_pregunta,1,time()+3600);
+				}
 				echo "<h3>";
 				foreach ($respuestas as $record) {
 					if($preg->id_clase_pregunta!=4){
 						echo "<li>".$record->texto_respuesta."</li>";
 					}else{
-						echo "<li>".$record->texto_respuesta." -- ".$record->texto_respuesta_b."</li>";
+						echo "<li>".$record->texto_respuesta_b." -- ".$record->texto_respuesta."</li>";
 					}	
 				}
 				echo "</h3>"; 
