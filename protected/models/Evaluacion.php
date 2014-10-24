@@ -59,7 +59,7 @@ class Evaluacion extends CActiveRecord
 		return array(
 			array('id_clase', 'required'),
 			array('id_clase, porcentaje, numero_max_tips, cant_dificil, cant_intermedio, cant_facil, puntuacion_dificil, puntuacion_intermedio, puntuacion_facil', 'numerical', 'integerOnly'=>true),
-			array('tiempo_inicio, tiempo_final','type','type'=>'datetime','datetimeFormat'=>'yyyy-mm-dd hh:mm:ss'),
+			array('tiempo_inicio, tiempo_final','type','type'=>'date','dateFormat'=>'yyyy-mm-dd'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id_evaluacion, id_clase, porcentaje, tiempo_inicio, tiempo_final, numero_max_tips, cant_dificil, cant_intermedio, cant_facil, puntuacion_dificil, puntuacion_intermedio, puntuacion_facil', 'safe', 'on'=>'search'),

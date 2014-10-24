@@ -28,8 +28,9 @@ $this->pageTitle=Yii::app()->name;
 		$criteria->join ='LEFT JOIN curso ON curso.id_curso=t.id_curso ';
 		$criteria->join .='LEFT JOIN tema ON tema.id_curso=curso.id_curso ';
 		$criteria->join .='LEFT JOIN clase ON clase.id_tema=tema.id_curso ';
-		$criteria->join .='INNER JOIN evaluacion ON (evaluacion.id_clase=clase.id_clase) AND (NOW() BETWEEN evaluacion.tiempo_inicio AND evaluacion.tiempo_final)';
-		$criteria->condition= 't.username_estudiante=:value';
+		$criteria->join .='INNER JOIN evaluacion ON (evaluacion.id_clase=clase.id_clase) AND (NOW() BETWEEN evaluacion.tiempo_inicio AND evaluacion.tiempo_final) ';
+		$criteria->join .='LEFT JOIN estudiante_evaluacion ON estudiante_evaluacion.id_evaluacion=evaluacion.id_evaluacion';
+		$criteria->condition= 't.username_estudiante=:value AND estudiante_evaluacion.calificacion IS NULL';
 		$criteria->params = array(":value"=>$user);
 		
 		$test=CursoEstudiantes::model()->findAll($criteria);

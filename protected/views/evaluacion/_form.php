@@ -57,8 +57,19 @@
 		$this->widget('CJuiDateTimePicker',array(
 			'model'=>$model, //Model object
 			'attribute'=>'tiempo_inicio', //attribute name
-					'mode'=>'datetime', //use "time","date" or "datetime" (default)
-			'options'=>array("dateFormat"=>'yy-mm-dd',"timeFormat"=>'hh:mm:ss') // jquery plugin options
+					'mode'=>'date', //use "time","date" or "datetime" (default)
+			'options'=>array("dateFormat"=>'yy-mm-dd',"minDate"=>0,
+				'onSelect' => 'js:function (selectedDateTime) { 
+					$("#tiempo_final").datetimepicker("option", "minDate", $("#tiempo_inicio").datetimepicker("getDate"));}',
+				'onClose'=>'js:function (dateText,inst) {
+					if($("#tiempo_final").val() != ""){
+						var testStartDate=$("#tiempo_inicio").datetimepicker("getDate");
+						var testEndDate=$("#tiempo_final").datetimepicker("getDate");
+						if(testStartDate > testEndDate)
+							$("#tiempo_final").datetimepicker("setDate", testStartDate);
+					} else {
+						$("#tiempo_final").val(dateText);}}',), 
+			'htmlOptions' => array('id' =>'tiempo_inicio'),
 		));
 		?>
 		<?php echo $form->error($model,'tiempo_inicio'); ?>
@@ -70,8 +81,22 @@
 		$this->widget('CJuiDateTimePicker',array(
 			'model'=>$model, //Model object
 			'attribute'=>'tiempo_final', //attribute name
-					'mode'=>'datetime', //use "time","date" or "datetime" (default)
-			'options'=>array("dateFormat"=>'yy-mm-dd',"timeFormat"=>'hh:mm:ss') // jquery plugin options
+					'mode'=>'date', //use "time","date" or "datetime" (default)
+			'options'=>array("dateFormat"=>'yy-mm-dd',
+				'onSelect' => 'js:function (selectedDateTime) { 
+					$("#tiempo_inicio").datetimepicker("option", "maxDate", $("#tiempo_final").datetimepicker("getDate")); }',
+				'onClose'=>'js:function (dateText,inst){
+					if($("#tiempo_inicio").val()!=""){
+						var testStartDate=$("#tiempo_inicio").datetimepicker("getDate");
+						var testEndDate=$("#tiempo_final").datetimepicker("getDate");
+						if(testStartDate > testEndDate){
+							$("#tiempo_inicio").datetimepicker("setDate", testEndDate);
+						}
+					}else{
+						$("#tiempo_inicio").val(dateText);
+					}
+				}',), // jquery plugin options
+			'htmlOptions' => array('id' => 'tiempo_final'),
 		));
 		?>
 		<?php echo $form->error($model,'tiempo_final'); ?>
